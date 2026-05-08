@@ -45,7 +45,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .wrap{
   max-width:var(--max);
   margin:0 auto;
-  padding:56px 16px 120px;
+  padding:56px 16px 90px;
+}
+
+@media (min-width:720px){
+  .wrap{
+    padding:56px 16px 120px;
+  }
+
+  h1{
+    font-size:34px;
+  }
+
+  .card{
+    padding:24px 24px;
+  }
 }
 
     /* 頂部脈絡 */
@@ -341,10 +355,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       height:auto;
     }
 
-    @media (min-width:720px){
-      h1{ font-size:34px; }
-      .card{ padding:24px 24px; }
-    }
     /* 廣告字樣 */
   .ad-label{
   width:100%;

@@ -1,502 +1,646 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>健康專欄｜關節保健｜銀髮養生</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>健康專欄｜關節保健｜銀髮養生</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#efefef;
+    color:#222;
+    line-height:1.9;
+}
+
+.topbar{
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+    padding:10px 14px;
+    font-size:13px;
+    color:#666;
+}
+
+.topbar-inner{
+    max-width:640px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-weight:bold;
+    color:#111;
+}
+
+.container{
+    max-width:640px;
+    margin:auto;
+    background:#fff;
+    min-height:100vh;
+    box-shadow:0 0 10px rgba(0,0,0,.05);
+}
+
+.article{
+    padding:18px;
+}
+
+.category{
+    display:inline-block;
+    background:#f2f2f2;
+    color:#777;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:30px;
+    margin-bottom:14px;
+}
+
+h1{
+    font-size:34px;
+    line-height:1.45;
+    margin-bottom:18px;
+    font-weight:800;
+    color:#111;
+}
+
+.meta{
+    font-size:13px;
+    color:#999;
+    margin-bottom:28px;
+    border-bottom:1px solid #eee;
+    padding-bottom:18px;
+}
+
+p{
+    font-size:21px;
+    margin-bottom:28px;
+    color:#222;
+}
+
+h2{
+    font-size:31px;
+    line-height:1.5;
+    margin-top:54px;
+    margin-bottom:26px;
+    color:#111;
+}
+
+.image-block{
+    margin:34px 0;
+}
+
+.image-placeholder{
+    width:100%;
+    height:360px;
+    background:#ddd;
+    border-radius:8px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#666;
+    font-size:16px;
+    text-align:center;
+    padding:20px;
+}
+
+.caption{
+    margin-top:10px;
+    font-size:13px;
+    color:#888;
+    line-height:1.7;
+}
+
+.highlight-box{
+    background:#fff8df;
+    border:1px solid #f0d879;
+    padding:24px;
+    border-radius:8px;
+    margin:40px 0;
+}
+
+.highlight-box p{
+    margin:0;
+    font-size:19px;
+    color:#5a4b1f;
+}
+
+.cta-box{
+    background:#f7f7f7;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:30px 24px;
+    text-align:center;
+    margin:46px 0;
+}
+
+.cta-box h3{
+    font-size:28px;
+    margin-bottom:16px;
+}
+
+.cta-box p{
+    font-size:18px;
+    margin-bottom:20px;
+    color:#555;
+}
+
+.cta-btn{
+    display:inline-block;
+    background:#d70000;
+    color:white;
+    text-decoration:none;
+    padding:16px 34px;
+    border-radius:999px;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.gray-box{
+    background:#f3f3f3;
+    padding:24px;
+    border-radius:8px;
+    margin:40px 0;
+}
+
+.gray-box h4{
+    font-size:22px;
+    margin-bottom:16px;
+}
+
+.gray-box ul{
+    padding-left:18px;
+}
+
+.gray-box li{
+    font-size:19px;
+    margin-bottom:14px;
+}
+
+.comment-area{
+    margin-top:70px;
+    border-top:6px solid #f1f1f1;
+    padding-top:40px;
+}
+
+.comment-title{
+    font-size:28px;
+    margin-bottom:26px;
+    font-weight:bold;
+}
+
+.comment{
+    display:flex;
+    gap:14px;
+    margin-bottom:26px;
+}
+
+.avatar{
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:#ddd;
+    flex-shrink:0;
+}
+
+.comment-body{
+    background:#f6f6f6;
+    padding:16px;
+    border-radius:10px;
+    width:100%;
+}
+
+.comment-name{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.comment-text{
+    font-size:17px;
+    color:#444;
+    line-height:1.8;
+}
+
+.sticky-cta{
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    background:#fff;
+    border-top:1px solid #ddd;
+    padding:10px;
+    z-index:999;
+}
+
+.sticky-inner{
+    max-width:640px;
+    margin:auto;
+    display:flex;
+    gap:10px;
+}
+
+.sticky-btn{
+    flex:1;
+    text-align:center;
+    padding:16px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.line-btn{
+    background:#06c755;
+    color:#fff;
+}
+
+.phone-btn{
+    background:#d70000;
+    color:#fff;
+}
+
+.bottom-space{
+    height:90px;
+}
+
+@media(max-width:768px){
+
+    h1{
+        font-size:31px;
     }
 
-    body {
-      font-family: "Noto Sans TC", sans-serif;
-      background: #f4f4f4;
-      color: #222;
-      line-height: 1.9;
+    h2{
+        font-size:28px;
     }
 
-    .topbar {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
-      padding: 12px 20px;
-      font-size: 14px;
-      color: #666;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    p{
+        font-size:20px;
     }
 
-    .topbar-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .image-placeholder{
+        height:260px;
     }
 
-    .badge {
-      background: #d60000;
-      color: white;
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      background: #fff;
-      min-height: 100vh;
-      padding-bottom: 140px;
-    }
-
-    .hero {
-      width: 100%;
-      height: 420px;
-      background: linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.45)),
-      url('https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=1600&auto=format&fit=crop') center/cover;
-      position: relative;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 40px 36px;
-      color: white;
-      background: linear-gradient(to top, rgba(0,0,0,.75), transparent);
-    }
-
-    .category {
-      display: inline-block;
-      background: rgba(255,255,255,.18);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(255,255,255,.25);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: 12px;
-      margin-bottom: 16px;
-    }
-
-    h1 {
-      font-size: 38px;
-      line-height: 1.35;
-      margin-bottom: 16px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    .meta {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      font-size: 14px;
-      opacity: .9;
-    }
-
-    .article {
-      padding: 42px 34px;
-    }
-
-    .lead {
-      font-size: 21px;
-      line-height: 1.9;
-      color: #222;
-      margin-bottom: 36px;
-      font-weight: 500;
-    }
-
-    p {
-      font-size: 19px;
-      color: #333;
-      margin-bottom: 28px;
-    }
-
-    h2 {
-      font-size: 31px;
-      line-height: 1.5;
-      margin-top: 58px;
-      margin-bottom: 28px;
-      font-weight: 800;
-      color: #111;
-    }
-
-    .image-block {
-      margin: 36px 0;
-    }
-
-    .image-placeholder {
-      width: 100%;
-      height: 420px;
-      background: #ececec;
-      border-radius: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #777;
-      font-size: 16px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .caption {
-      margin-top: 10px;
-      color: #888;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .quote-box {
-      background: #faf6ee;
-      border-left: 5px solid #c59b53;
-      padding: 28px;
-      border-radius: 12px;
-      margin: 42px 0;
-    }
-
-    .quote-box p {
-      margin: 0;
-      font-size: 18px;
-      color: #5a4630;
-    }
-
-    .cta-box {
-      background: linear-gradient(135deg, #1e1e1e, #3b3b3b);
-      border-radius: 18px;
-      padding: 36px 28px;
-      margin: 48px 0;
-      color: white;
-      text-align: center;
-    }
-
-    .cta-box h3 {
-      font-size: 28px;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-
-    .cta-box p {
-      color: rgba(255,255,255,.85);
-      margin-bottom: 26px;
-      font-size: 17px;
-    }
-
-    .cta-btn {
-      display: inline-block;
-      background: #d60000;
-      color: white;
-      padding: 16px 34px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: .2s;
-    }
-
-    .cta-btn:hover {
-      transform: translateY(-2px);
-      opacity: .95;
-    }
-
-    .checklist {
-      background: #f8f8f8;
-      border-radius: 16px;
-      padding: 30px;
-      margin-top: 46px;
-    }
-
-    .checklist h3 {
-      font-size: 24px;
-      margin-bottom: 18px;
-    }
-
-    .checklist ul {
-      list-style: none;
-    }
-
-    .checklist li {
-      font-size: 19px;
-      padding: 12px 0;
-      border-bottom: 1px solid #e6e6e6;
-    }
-
-    .checklist li:last-child {
-      border-bottom: none;
-    }
-
-    .sticky-cta {
-      position: fixed;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(255,255,255,.96);
-      backdrop-filter: blur(10px);
-      border-top: 1px solid #ddd;
-      padding: 14px 18px;
-      z-index: 999;
-    }
-
-    .sticky-inner {
-      max-width: 760px;
-      margin: 0 auto;
-      display: flex;
-      gap: 12px;
-    }
-
-    .sticky-btn {
-      flex: 1;
-      text-align: center;
-      padding: 16px;
-      border-radius: 12px;
-      font-size: 17px;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    .line-btn {
-      background: #06c755;
-      color: white;
-    }
-
-    .phone-btn {
-      background: #d60000;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      .hero {
-        height: 360px;
-      }
-
-      .hero-overlay {
-        padding: 28px 22px;
-      }
-
-      h1 {
-        font-size: 31px;
-      }
-
-      .article {
-        padding: 28px 20px;
-      }
-
-      p {
-        font-size: 18px;
-      }
-
-      h2 {
-        font-size: 27px;
-      }
-
-      .image-placeholder {
-        height: 300px;
-      }
-
-      .sticky-inner {
-        flex-direction: column;
-      }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-  <div class="topbar">
+<div class="topbar">
     <div class="topbar-inner">
-      <div>健康專欄｜關節保健｜銀髮養生</div>
-      <div class="badge">專題報導</div>
+        <div class="logo">健康生活報</div>
+        <div>健康專題</div>
     </div>
-  </div>
+</div>
 
-  <div class="container">
+<div class="container">
 
-    <div class="hero">
-      <div class="hero-overlay">
-        <div class="category">健康專題</div>
-        <h1>煮了四十年的飯、帶了三個孫子，她沒想到最先撐不住的，是她的腰和膝蓋</h1>
-        <div class="meta">
-          <span>2026/05/20</span>
-          <span>｜</span>
-          <span>健康編輯部</span>
-        </div>
-      </div>
+<div class="article">
+
+<div class="category">健康專欄｜關節保健｜銀髮養生</div>
+
+<h1>
+煮了四十年的飯、帶了三個孫子，她沒想到最先撐不住的，是她的腰和膝蓋
+</h1>
+
+<div class="meta">
+2026-05-20 ｜ 健康編輯部
+</div>
+
+<p>
+上禮拜三早上，黃阿姨一個人去市場買菜。
+</p>
+
+<p>
+提了兩大袋食材回來，走上三樓，煮了午飯，下午還帶孫子去公園走了一圈。鄰居在樓梯間碰到她，說：「你最近氣色很好耶。」她笑笑說：「沒有啦，還過得去。」
+</p>
+
+<p>
+沒有人看得出來，一年前的她，只不過蹲下去撿一個湯匙，卻站不起來。
+</p>
+
+<div class="image-block">
+    <div class="image-placeholder">
+        甲魚膠影片
     </div>
+</div>
 
-    <div class="article">
+<h2>
+那一天，她第一次意識到身體好像真的怪怪的
+</h2>
 
-      <p class="lead">
-        上禮拜三早上，黃阿姨一個人去市場買菜。提了兩大袋食材回來，走上三樓，煮了午飯，下午還帶孫子去公園走了一圈。
-      </p>
+<p>
+那是某個再平常不過的下午，廚房裡，58歲的她蹲下去撿一個掉在地上的湯匙。
+</p>
 
-      <p>
-        鄰居在樓梯間碰到她，說：「你最近氣色很好耶。」她笑笑說：「沒有啦，還過得去。」
-      </p>
+<p>
+結果，她撐著牆試了好幾次，才慢慢站起來
+</p>
 
-      <p>
-        沒有人看得出來，一年前的她，只不過蹲下去撿一個湯匙，卻站不起來。
-      </p>
+<p>
+沒有完全動不了，但膝蓋很難使力。那一刻她才認真去想：我的腰和膝蓋，到底從什麼時候開始變成這樣了？
+</p>
 
-      <div class="image-block">
-        <div class="image-placeholder">
-          影片區塊（甲魚膠影片）
-        </div>
-      </div>
+<p>
+細想起來，其實已經很久了。買菜提重物，腰就悶痛；廚房站久了，膝蓋開始脹；爬樓梯要靠扶手才走得穩。她一直以為是自己太累了，睡一覺就好，但這樣「睡一覺休息就好」的做法，經過了好幾年，卻什麼都沒有好。
+</p>
 
-      <h2>那一天，她第一次意識到身體好像真的怪怪的</h2>
+<p>
+去骨科檢查後，醫師說她的腰和膝蓋已經有明顯退化現象，推測是長期負重加上姿勢累積下來的結果。
+</p>
 
-      <p>
-        那是某個再平常不過的下午，廚房裡，58歲的她蹲下去撿一個掉在地上的湯匙。
-      </p>
-
-      <p>
-        結果，她撐著牆試了好幾次，才慢慢站起來。
-      </p>
-
-      <p>
-        沒有完全動不了，但膝蓋很難使力。那一刻她才認真去想：我的腰和膝蓋，到底從什麼時候開始變成這樣了？
-      </p>
-
-      <div class="image-block">
-        <div class="image-placeholder">
-          圖片區塊：膝蓋退化 X 光片
-        </div>
-        <div class="caption">圖：膝蓋退化X光片</div>
-      </div>
-
-      <p>
-        「醫師說，你這個年紀有這樣的狀況很正常。」
-      </p>
-
-      <p>
-        黃阿姨說，她聽到「正常」兩個字，心裡只有一種說不出的委屈。
-      </p>
-
-      <h2>她不是運動員，沒出過意外。她只是把這個家顧好了四十年</h2>
-
-      <p>
-        黃阿姨23歲嫁進夫家，從那天起就沒有真正停下來休息過。
-      </p>
-
-      <p>
-        三餐全包、孩子的事、婆家的事、家裡各種大小事。提菜籃、彎腰拖地、蹲著刷浴室、抱孫子、長時間站在爐子前炒菜……。
-      </p>
-
-      <div class="image-block">
-        <div class="image-placeholder">
-          圖片區塊：60歲左右的阿姨揹著孫子在炒菜的側面照
-        </div>
-      </div>
-
-      <p>
-        每個動作單獨看都好像沒什麼，但四十年，每天重複，身體就這樣一點一點地開始撐不住。
-      </p>
-
-      <div class="quote-box">
-        <p>
-          很多家庭主婦，都是等身體開始不舒服後，才第一次停下來看自己。年輕時忙著照顧孩子、工作、家務，很多人早就習慣「忍一下就過了」。
-        </p>
-      </div>
-
-      <div class="cta-box">
-        <h3>現在開始保養，還不算晚</h3>
-        <p>很多人都是等到上下樓開始變慢，才發現身體其實早就在提醒自己了。</p>
-        <a href="#" class="cta-btn">立即填寫表單</a>
-      </div>
-
-      <h2>市場裡聽來的一句話讓她動搖了</h2>
-
-      <p>
-        轉機發生在一個很普通的早晨。
-      </p>
-
-      <p>
-        黃阿姨去傳統市場買菜，在豆腐攤前遇到老鄰居陳太太。兩個人站著聊，黃阿姨隨口說腰和膝蓋最近又不舒服，整個人提不起勁。
-      </p>
-
-      <div class="image-block">
-        <div class="image-placeholder">
-          圖片區塊：兩個60歲左右的阿姨在市場認真聊天
-        </div>
-      </div>
-
-      <p>
-        黃阿姨當下其實沒有太認真，因為這輩子聽過太多「有人說很有效」，試過的也不少。
-      </p>
-
-      <h2>黃阿姨這才發現，原來身體早就在提醒她了</h2>
-
-      <div class="image-block">
-        <div class="image-placeholder">
-          圖片區塊：甲魚補湯
-        </div>
-      </div>
-
-      <p>
-        女兒跟她說：「很多人年紀到了之後，不只是骨頭，連身體都會慢慢變得沒以前靈活。」
-      </p>
-
-      <div class="cta-box">
-        <h3>很多人不是老了，而是撐太久了</h3>
-        <p>了解更多熟齡保養方式與日常照護建議。</p>
-        <a href="#" class="cta-btn">加入 LINE 諮詢</a>
-      </div>
-
-      <h2>第一個讓她注意到的改變，是早上起床那一刻</h2>
-
-      <p>
-        以前黃阿姨每天早上起床，要先在床邊坐著暖機，讓腰和膝蓋慢慢活動開，大概五分鐘，才敢站起來走路。
-      </p>
-
-      <p>
-        後來有一天早上，她開始覺得早上起床沒有以前那麼難熬。
-      </p>
-
-      <h2>後來有一天，她又自己把菜提回了三樓</h2>
-
-      <div class="image-block">
-        <div class="image-placeholder">
-          圖片區塊：60歲左右的阿姨提著兩袋菜爬樓梯
-        </div>
-      </div>
-
-      <p>
-        那天她提著兩袋菜慢慢走回家。回到廚房時，她第一次發現，原來自己還有力氣把午餐慢慢煮完。
-      </p>
-
-      <h2>現在的她，又開始主動說要去市場了</h2>
-
-      <p>
-        黃阿姨說，她沒有期待奇蹟。
-      </p>
-
-      <p>
-        六十幾歲了，幾十年的家事累積下來的損耗，不可能完全歸零。她知道。
-      </p>
-
-      <div class="checklist">
-        <h3>如果你也開始覺得：</h3>
-        <ul>
-          <li>・上下樓越來越慢</li>
-          <li>・蹲下起身開始吃力</li>
-          <li>・出門一趟就容易累</li>
-        </ul>
-      </div>
-
+<div class="image-block">
+    <div class="image-placeholder">
+        膝蓋退化X光片
     </div>
-
-  </div>
-
-  <div class="sticky-cta">
-    <div class="sticky-inner">
-      <a href="#" class="sticky-btn line-btn">LINE 諮詢</a>
-      <a href="tel:0800282777" class="sticky-btn phone-btn">立即撥打電話</a>
+    <div class="caption">
+        圖：膝蓋退化X光片
     </div>
-  </div>
+</div>
+
+<p>
+「醫師說，你這個年紀有這樣的狀況很正常。」
+</p>
+
+<p>
+黃阿姨說，她聽到「正常」兩個字，心裡只有一種說不出的委屈。
+</p>
+
+<h2>
+她不是運動員，沒出過意外。她只是把這個家顧好了四十年
+</h2>
+
+<p>
+黃阿姨23歲嫁進夫家，從那天起就沒有真正停下來休息過。
+</p>
+
+<p>
+三餐全包、孩子的事、婆家的事、家裡各種大小事。提菜籃、彎腰拖地、蹲著刷浴室、抱孫子、長時間站在爐子前炒菜……。
+</p>
+
+<div class="image-block">
+    <div class="image-placeholder">
+        60歲左右的阿姨揹著孫子在炒菜的側面照
+    </div>
+</div>
+
+<p>
+每個動作單獨看都好像沒什麼，但四十年，每天重複，身體就這樣一點一點地開始撐不住。
+</p>
+
+<p>
+醫師說正常，叫她少做一點，不要負重太多。
+</p>
+
+<p>
+她回家想了很久。
+</p>
+
+<p>
+不能提重物，那菜怎麼買？不能蹲，那地怎麼拖？
+</p>
+
+<p>
+她不是不想聽醫生的話，是家裡的事還是得做，但這些日常小事，無形中都變成了一種折磨。她試過復健、貼藥布、吃止痛藥，但就是一陣好一陣壞，從來沒有真正穩定下來過。
+</p>
+
+<div class="highlight-box">
+<p>
+很多家庭主婦，都是等身體開始不舒服後，才第一次停下來看自己
+<br><br>
+年輕時忙著照顧孩子、工作、家務，很多人早就習慣「忍一下就過了」。直到上下樓開始變慢、蹲下起身變吃力，才發現身體其實已經累積很多年了。
+</p>
+</div>
+
+<div class="cta-box">
+<h3>立即了解更多</h3>
+<p>現在開始保養，也許還不算太晚</p>
+<a href="#" class="cta-btn">填寫表單</a>
+</div>
+
+<h2>
+市場裡聽來的一句話讓她動搖了
+</h2>
+
+<p>
+轉機發生在一個很普通的早晨。
+</p>
+
+<p>
+黃阿姨去傳統市場買菜，在豆腐攤前遇到老鄰居陳太太。兩個人站著聊，黃阿姨隨口說腰和膝蓋最近又不舒服，整個人提不起勁。
+</p>
+
+<p>
+陳太太壓低聲音說：「我之前也這樣。後來有人介紹我補一種老一輩常拿來燉湯的東西，我自己吃了一段時間後，整個人真的差很多。」
+</p>
+
+<p>
+黃阿姨當下其實沒有太認真，因為這輩子聽過太多「有人說很有效」，試過的也不少，最後很多都只是剛開始有感而已，或是完全沒作用。
+</p>
+
+<p>
+但回家的路上，她一直想起陳太太講話的樣子。沒有很誇張，也不像在推銷，就只是很平常地分享自己的經歷。反而因為那種平淡，讓她記了很久。
+</p>
+
+<div class="image-block">
+    <div class="image-placeholder">
+        兩個60歲左右的阿姨在市場認真聊天的樣子
+    </div>
+</div>
+
+<h2>
+黃阿姨這才發現，原來身體早就在提醒她了
+</h2>
+
+<p>
+回家後，黃阿姨把陳太太說的話告訴女兒。
+</p>
+
+<p>
+女兒後來查資料時才發現，原來現在很多熟齡族群，其實都有固定補充甲魚裙帶的習慣。
+</p>
+
+<p>
+黃阿姨以前只知道甲魚可以燉湯，從來沒想過，原來現在很多人會把它當成日常保養的一部分。
+</p>
+
+<div class="image-block">
+    <div class="image-placeholder">
+        甲魚補湯
+    </div>
+</div>
+
+<p>
+女兒跟她說：「很多人年紀到了之後，不只是骨頭，連身體都會慢慢變得沒以前靈活。所以很多人到了五、六十歲後，腰跟膝蓋的不舒服常常會一起出現。」
+</p>
+
+<p>
+黃阿姨其實沒有完全聽懂那些成分。
+</p>
+
+<p>
+她只是第一次覺得，原來這些年身體的不舒服，也許真的不是「休息一下就好」那麼簡單。
+</p>
+
+<p>
+再加上想到自己現在連去市場都開始變得吃力，她最後還是決定試試看。
+</p>
+
+<div class="cta-box">
+<h3>加入LINE諮詢</h3>
+<p>了解更多熟齡保養資訊</p>
+<a href="#" class="cta-btn">立即加入LINE</a>
+</div>
+
+<h2>
+第一個讓她注意到的改變，是早上起床那一刻
+</h2>
+
+<p>
+以前黃阿姨每天早上起床，要先在床邊坐著暖機，讓腰和膝蓋慢慢活動開，大概五分鐘，才敢站起來走路，她如果跳過這個程序，腰會刺痛，膝蓋也會軟。
+</p>
+
+<p>
+後來有一天早上，她開始覺得早上起床沒有以前那麼難熬。站起來的時候，腰不再像以前那樣刺。
+</p>
+
+<p>
+她以為是心理作用，直到先生說：「你走路好像比較順了。」
+</p>
+
+<p>
+她才開始更認真注意自己的變化。
+</p>
+
+<h2>
+後來有一天，她又自己把菜提回了三樓
+</h2>
+
+<p>
+有一段時間，她連去市場都會等女兒休假再一起出門，因為提不了重物，走遠一點腰就很痠，膝蓋也跟著不舒服。
+</p>
+
+<p>
+又過了一段時間後，有一天女兒臨時有事，黃阿姨居然說：「你去忙，我自己去就好。」
+</p>
+
+<p>
+女兒有點擔心，但黃阿姨揮揮手就出門了。
+</p>
+
+<p>
+那天她提著兩袋菜慢慢走回家。回到廚房時，她第一次發現，原來自己還有力氣把午餐慢慢煮完。
+</p>
+
+<div class="image-block">
+    <div class="image-placeholder">
+        60歲左右的阿姨提著兩袋菜爬樓梯的樣子
+    </div>
+</div>
+
+<h2>
+現在的她，又開始主動說要去市場了
+</h2>
+
+<p>
+黃阿姨說，她沒有期待奇蹟。
+</p>
+
+<p>
+六十幾歲了，幾十年的家事累積下來的損耗，不可能完全歸零。她知道。
+</p>
+
+<p>
+她現在偶爾還是會腰痠腳痛，但至少不用再像以前一樣，出門一趟就得躺半天。
+</p>
+
+<p>
+「以前覺得老了就是這樣，三不五時筋骨痠痛是正常的，要認命。現在覺得，好像不用那麼快認命。」
+</p>
+
+<p>
+女兒說，媽媽最近整個人的狀態比去年好很多。有一段時間，媽媽想法比較悲觀，會覺得自己是不是連去市場買菜這種小事，以後都要麻煩別人了。但現在的她，都會主動說自己去市場就好。
+</p>
+
+<p>
+對很多人來說，去市場買菜只是小事，但對黃阿姨而言，她現在最開心的，是終於又能自己去市場、陪孫子散步，回家後還有力氣把晚餐慢慢煮完。
+</p>
+
+<div class="gray-box">
+<h4>如果你也開始覺得：</h4>
+
+<ul>
+<li>上下樓越來越慢</li>
+<li>蹲下起身開始吃力</li>
+<li>出門一趟就容易累</li>
+</ul>
+
+</div>
+
+<p>
+很多人年輕時總覺得「忍一下就過了」，直到開始影響生活，才發現身體早就在提醒自己了。
+</p>
+
+<p>
+也許不是老了，而是身體真的撐太久了。
+</p>
+
+<div class="comment-area">
+
+<div class="comment-title">熱門留言</div>
+
+<div class="comment">
+<div class="avatar"></div>
+<div class="comment-body">
+<div class="comment-name">王太太</div>
+<div class="comment-text">
+真的很有感…我媽也是這樣，之前一直覺得只是年紀到了。
+</div>
+</div>
+</div>
+
+<div class="comment">
+<div class="avatar"></div>
+<div class="comment-body">
+<div class="comment-name">陳小姐</div>
+<div class="comment-text">
+看到這篇很有感觸，很多媽媽真的都把自己放最後。
+</div>
+</div>
+</div>
+
+<div class="comment">
+<div class="avatar"></div>
+<div class="comment-body">
+<div class="comment-name">黃先生</div>
+<div class="comment-text">
+我老婆每天做家事也是常喊腰痠，看完有點心疼。
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="bottom-space"></div>
+
+</div>
+
+</div>
+
+<div class="sticky-cta">
+<div class="sticky-inner">
+<a href="#" class="sticky-btn line-btn">LINE諮詢</a>
+<a href="tel:0800282777" class="sticky-btn phone-btn">撥打電話</a>
+</div>
+</div>
 
 </body>
 </html>
-

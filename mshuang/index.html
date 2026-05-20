@@ -148,7 +148,7 @@ h2{
 .cta-img{
     width:100%;
     display:block;
-    border-radius:10px;
+    border-radius:0px;
 }
 
 .gray-box{
@@ -173,13 +173,6 @@ h2{
 }
 
 
-.avatar{
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:#ddd;
-    flex-shrink:0;
-}
 
 .sticky{
     position:fixed;
@@ -205,25 +198,6 @@ h2{
     height:90px;
 }
 
-@media(max-width:768px){
-
-    h1{
-        font-size:31px;
-    }
-
-    h2{
-        font-size:28px;
-    }
-
-    p{
-        font-size:20px;
-    }
-
-    .image-placeholder{
-        height:260px;
-    }
-
-}
 </style>
 </head>
 
@@ -435,9 +409,9 @@ margin-bottom:0;
 黃阿姨以前只知道甲魚可以燉湯，從來沒想過，原來現在很多人會把它當成日常保養的一部分。
 </p>
 
- <figure>
-        <img class="img" src="./images/04.jpg" alt="甲魚湯" loading="lazy" />
- </figure>
+<figure class="image-block"> 
+    <img class="img" src="./images/04.jpg" alt="甲魚湯" loading="lazy" />
+</figure>
 
 <p>
 女兒跟她說：「很多人年紀到了之後，不只是骨頭，連身體都會慢慢變得沒以前靈活。所以很多人到了五、六十歲後，腰跟膝蓋的不舒服常常會一起出現。」
@@ -563,11 +537,18 @@ color:#111;
 <li>出門一趟就容易累</li>
 </ul>
 
-</div>
-
-<p>
+<p style="
+font-size:22px;
+font-weight:800;
+line-height:1.7;
+margin-top:22px;
+margin-bottom:0;
+color:#111;
+">
 也許不是老了，而是身體真的撐太久了。
 </p>
+
+</div>
 
 <div class="bottom-space"></div>
 

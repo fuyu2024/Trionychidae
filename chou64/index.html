@@ -43,7 +43,7 @@ body{
     "Microsoft JhengHei",
     Arial,
     sans-serif;
-  font-size:19px;
+  font-size:21px;
   line-height:1.95;
 }
 
@@ -148,7 +148,7 @@ a{
 h1{
   margin:0;
   color:#292929;
-  font-size:38px;
+  font-size:42px;
   line-height:1.48;
   letter-spacing:-.8px;
   font-weight:900;
@@ -197,7 +197,7 @@ h1{
 }
 
 .article-body p{
-  margin:0 0 22px;
+  margin:0 0 24px;
 }
 
 
@@ -208,7 +208,7 @@ h1{
 .lead-dialogue{
   margin:0 0 29px;
   color:#784838;
-  font-size:26px;
+  font-size:29px;
   line-height:1.55;
   font-weight:900;
 }
@@ -216,17 +216,14 @@ h1{
 
 /* =========================
    小標
-
-   不做整塊色底
-   就像一般文章標題
 ========================= */
 
 h2{
   position:relative;
-  margin:58px 0 27px;
-  padding:0 0 14px 17px;
+  margin:60px 0 28px;
+  padding:0 0 15px 18px;
   color:#3d3633;
-  font-size:27px;
+  font-size:30px;
   line-height:1.55;
   font-weight:900;
   letter-spacing:-.3px;
@@ -237,8 +234,8 @@ h2:before{
   content:"";
   position:absolute;
   left:0;
-  top:7px;
-  bottom:19px;
+  top:8px;
+  bottom:20px;
   width:5px;
   background:var(--main);
   border-radius:4px;
@@ -257,12 +254,10 @@ h2:before{
 
 /* =========================
    圖片
-
-   不做卡片、不加陰影
 ========================= */
 
 .article-image{
-  margin:32px -20px 35px;
+  margin:34px -20px 38px;
 }
 
 .article-image img{
@@ -282,30 +277,28 @@ h2:before{
 
 
 /* =========================
-   真正需要停下來看的句子
+   重點句
 ========================= */
 
 .key-quote{
-  margin:31px 0;
-  padding:22px 24px;
+  margin:32px 0;
+  padding:23px 25px;
   background:var(--warm);
   border-left:5px solid #d3a45d;
   color:#654637;
-  font-size:21px;
+  font-size:23px;
   line-height:1.75;
   font-weight:900;
 }
 
 
 /* =========================
-   成分那一小段
-
-   只有非常淡的區隔
+   成分補充
 ========================= */
 
 .info-note{
-  margin:27px 0;
-  padding:20px 22px;
+  margin:29px 0;
+  padding:22px 24px;
   background:#f8f5ef;
   border-top:1px solid #e8e0d5;
   border-bottom:1px solid #e8e0d5;
@@ -318,12 +311,10 @@ h2:before{
 
 /* =========================
    CTA
-
-   CTA 才明顯跟正文區隔
 ========================= */
 
 .article-cta{
-  margin:43px -5px;
+  margin:45px -5px;
   padding:18px;
   background:#f8ead7;
   border-radius:7px;
@@ -333,7 +324,7 @@ h2:before{
 .cta-text{
   margin-bottom:12px;
   color:#765242;
-  font-size:16px;
+  font-size:17px;
   font-weight:800;
 }
 
@@ -347,15 +338,12 @@ h2:before{
   border-radius:5px;
 }
 
-
-/* CTA 圖還沒放時 */
-
 .cta-fallback{
   padding:18px 20px;
   background:var(--main);
   border-radius:5px;
   color:#fff;
-  font-size:20px;
+  font-size:21px;
   font-weight:900;
 }
 
@@ -365,14 +353,14 @@ h2:before{
 ========================= */
 
 .final-line{
-  margin:31px 0 0;
-  padding:23px 20px;
+  margin:32px 0 0;
+  padding:24px 20px;
   background:#fff5df;
   border-top:2px solid #d5a354;
   border-bottom:2px solid #d5a354;
   color:#754431;
   text-align:center;
-  font-size:27px;
+  font-size:29px;
   font-weight:900;
 }
 
@@ -384,17 +372,19 @@ h2:before{
 .footer{
   width:min(100%, 800px);
   margin:0 auto 90px;
-  padding:28px 40px 35px;
+  padding:30px 40px 38px;
   background:#eeeae3;
   color:#747474;
-  font-size:12px;
-  line-height:1.8;
+  font-size:13px;
+  line-height:1.9;
+  text-align:center;
 }
 
 .warning{
-  padding-bottom:17px;
-  margin-bottom:15px;
+  padding-bottom:18px;
+  margin-bottom:17px;
   border-bottom:1px solid #d7d2ca;
+  text-align:center;
 }
 
 .legal{
@@ -433,7 +423,7 @@ h2:before{
 }
 
 .sticky-fallback{
-  min-height:58px;
+  min-height:60px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -441,7 +431,7 @@ h2:before{
   border-radius:6px;
   border-bottom:4px solid #7d3927;
   color:#fff;
-  font-size:19px;
+  font-size:20px;
   font-weight:900;
 }
 
@@ -454,7 +444,7 @@ h2:before{
 
   body{
     background:#fff;
-    font-size:18px;
+    font-size:20px;
     line-height:1.95;
   }
 
@@ -464,7 +454,7 @@ h2:before{
   }
 
   .site-name{
-    font-size:17px;
+    font-size:18px;
   }
 
   .site-sub{
@@ -474,7 +464,7 @@ h2:before{
   .breadcrumb{
     width:calc(100% - 34px);
     padding:8px 0;
-    font-size:12px;
+    font-size:13px;
     white-space:nowrap;
     overflow:hidden;
     text-overflow:ellipsis;
@@ -486,50 +476,55 @@ h2:before{
 
   .article-header{
     width:calc(100% - 40px);
-    padding:27px 0 24px;
+    padding:28px 0 25px;
   }
 
   .category{
-    margin-bottom:9px;
-    font-size:13px;
+    margin-bottom:10px;
+    font-size:14px;
   }
 
   h1{
-    font-size:29px;
+    font-size:32px;
     line-height:1.5;
     letter-spacing:-.5px;
   }
 
   .meta{
-    margin-top:14px;
-    padding-top:11px;
+    margin-top:15px;
+    padding-top:12px;
+    font-size:14px;
   }
 
   .article-body{
     width:calc(100% - 40px);
-    padding:30px 0 60px;
+    padding:31px 0 62px;
+  }
+
+  .article-body p{
+    margin-bottom:23px;
   }
 
   .lead-dialogue{
-    font-size:23px;
+    font-size:26px;
   }
 
   h2{
-    margin:48px 0 24px;
-    padding-left:14px;
-    padding-bottom:12px;
-    font-size:23px;
+    margin:51px 0 26px;
+    padding-left:15px;
+    padding-bottom:13px;
+    font-size:27px;
     line-height:1.55;
   }
 
   h2:before{
-    top:6px;
-    bottom:17px;
+    top:7px;
+    bottom:18px;
     width:4px;
   }
 
   .article-image{
-    margin:28px -20px 32px;
+    margin:31px -20px 35px;
   }
 
   .article-image img{
@@ -541,35 +536,52 @@ h2:before{
     width:100%;
     margin:0;
     padding:8px 20px 0;
+    font-size:14px;
   }
 
   .key-quote{
-    margin:27px -3px;
-    padding:19px 19px;
-    font-size:19px;
+    margin:29px -3px;
+    padding:21px 20px;
+    font-size:22px;
   }
 
   .info-note{
     margin-left:-5px;
     margin-right:-5px;
-    padding:18px 20px;
+    padding:20px;
   }
 
   .article-cta{
-    margin:37px -10px;
+    margin:40px -10px;
     padding:14px;
+  }
+
+  .cta-text{
+    font-size:17px;
   }
 
   .final-line{
     margin-left:-3px;
     margin-right:-3px;
-    font-size:25px;
+    padding:24px 18px;
+    font-size:28px;
   }
 
   .footer{
     width:100%;
     margin-bottom:85px;
-    padding:25px 20px 32px;
+    padding:28px 22px 35px;
+    font-size:13px;
+    line-height:1.9;
+    text-align:center;
+  }
+
+  .warning{
+    text-align:center;
+  }
+
+  .sticky-fallback{
+    font-size:20px;
   }
 
 }
@@ -601,7 +613,6 @@ h2:before{
 </header>
 
 
-
 <!-- =========================
      麵包屑
 ========================= -->
@@ -617,7 +628,6 @@ h2:before{
   </div>
 
 </div>
-
 
 
 <!-- =========================
@@ -646,7 +656,6 @@ h2:before{
 </header>
 
 
-
 <!-- =========================
      YOUTUBE
 
@@ -663,7 +672,6 @@ h2:before{
   </iframe>
 
 </div>
-
 
 
 <div class="article-body">
@@ -694,7 +702,6 @@ h2:before{
 <p>只有他自己知道，那一下其實把他嚇到了。</p>
 
 
-
 <!-- =========================
      第一段
 ========================= -->
@@ -722,7 +729,6 @@ h2:before{
 <p>但接下來那一天，他開始偷偷注意自己的腳。</p>
 
 
-
 <!-- 圖片 1 -->
 
 <figure class="article-image">
@@ -732,7 +738,6 @@ h2:before{
     alt="60幾歲亞洲男性從遊覽車階梯往下踩">
 
 </figure>
-
 
 
 <p>發現走平緩的路沒什麼；碰到高一點的階梯，腳會多停一下；遇到比較大的高低差，手也會下意識往旁邊找東西扶。</p>
@@ -750,7 +755,6 @@ h2:before{
 <p>偏偏一碰到要抬高、跨大步、彎下去再起來的動作，就是沒有以前那麼乾脆。</p>
 
 <p>那次差點跌倒之後，老周才第一次真的把這件事放在心上。</p>
-
 
 
 <!-- =========================
@@ -798,13 +802,9 @@ h2:before{
 <p>阿明伸出兩根手指。</p>
 
 
-
-<!-- 重要句子 -->
-
 <div class="key-quote">
 「一個甲魚膠，一個彈性蛋白。我現在這兩個是一起顧。」
 </div>
-
 
 
 <p>講完還特別補了一句：</p>
@@ -822,7 +822,6 @@ h2:before{
 <p>「我跟你講我自己的就好啦，那些你自己看比較準。」</p>
 
 <p>老周嘴上罵他一句「講一半的」，心裡倒真的把這兩個名字記下來了。</p>
-
 
 
 <!-- =========================
@@ -846,7 +845,6 @@ h2:before{
 </div>
 
 
-
 <!-- =========================
      第三段
 ========================= -->
@@ -866,15 +864,11 @@ h2:before{
 <p>兩個人就這樣一邊看、一邊聊。</p>
 
 
-
-<!-- 成分小補充 -->
-
 <div class="info-note">
 
 <p>老周才慢慢搞懂，甲魚膠裡有豐富的膠原相關營養；而彈性蛋白，講的是組織本身延展、回彈這一塊。</p>
 
 </div>
-
 
 
 <p>「所以阿明才會兩個一起吃喔？」</p>
@@ -890,7 +884,6 @@ h2:before{
 <p>原來有些彈性蛋白胜肽，會從鰹魚的動脈球取得。這個部位本來就會隨著心臟跳動不斷伸縮，因此含有豐富的彈性蛋白。</p>
 
 
-
 <!-- 圖片 2 -->
 
 <figure class="article-image">
@@ -900,7 +893,6 @@ h2:before{
     alt="鰹魚動脈球與彈性蛋白示意圖">
 
 </figure>
-
 
 
 <p>老周一聽反而更好奇。</p>
@@ -918,7 +910,6 @@ h2:before{
 <p>這一次，他是真的想顧了。</p>
 
 <p>「好啦，阿明都吃成這樣了，我也來認真顧一下。」</p>
-
 
 
 <!-- =========================
@@ -946,7 +937,6 @@ h2:before{
 <p>騎機車要出門，抬腳就能跨上去，不用站在旁邊喬半天。遊覽車門一開，跟著大家下車就好，不用先盯著下面那一階，想著等等要怎麼踩。</p>
 
 
-
 <!-- 圖片 3 -->
 
 <figure class="article-image">
@@ -958,7 +948,6 @@ h2:before{
 </figure>
 
 
-
 <p>朋友在電話裡問一句「下禮拜要不要出去走走？」</p>
 
 <p>他也不想第一個想到的，是那邊樓梯多不多、自己走不走得完。</p>
@@ -966,7 +955,6 @@ h2:before{
 <div class="key-quote">
 能想去就去，不用每次出門前，都先替自己的腳想那麼多。
 </div>
-
 
 
 <!-- =========================
@@ -1004,7 +992,6 @@ h2:before{
 <p>原來他最有感的，不是突然變得多厲害。</p>
 
 
-
 <!-- =========================
      CTA 2：LINE
 ========================= -->
@@ -1027,7 +1014,6 @@ h2:before{
   </a>
 
 </div>
-
 
 
 <!-- =========================
@@ -1079,7 +1065,6 @@ h2:before{
 <p>今年叫他走慢一點的，還是這群人。</p>
 
 
-
 <!-- =========================
      最後
 ========================= -->
@@ -1125,7 +1110,6 @@ h2:before{
 </div>
 
 
-
 <!-- =========================
      FOOTER
 ========================= -->
@@ -1133,37 +1117,24 @@ h2:before{
 <footer class="footer">
 
   <div class="warning">
-
     本頁內容僅供健康資訊參考，不作為醫療診斷、治療或處方依據；如有身體不適，請洽專業醫療人員。
-
     <br><br>
-
     填寫表單或加入官方帳號後，您可能會收到產品資訊、優惠活動、健康資訊或客服聯繫等相關訊息。
-
   </div>
 
   <div class="legal">
-
     <a href="terms.html">Terms &amp; Conditions</a>
     &nbsp;｜&nbsp;
     <a href="privacy.html">Privacy Policy</a>
     &nbsp;｜&nbsp;
     <a href="research.html">Scientific Research</a>
-
   </div>
 
 </footer>
 
 
-
 <!-- =========================
      底部懸浮電話 CTA
-
-     正式 GIF 做好後可以直接改成：
-
-     <a href="tel:電話">
-       <img src="assets/cta-call.gif" alt="立即來電">
-     </a>
 ========================= -->
 
 <div class="sticky-cta">

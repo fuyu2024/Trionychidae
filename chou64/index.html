@@ -1,654 +1,687 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了</title>
-
-  <meta name="description" content="從一次下遊覽車差點跌倒開始，64歲的老周第一次認真面對自己的日常行動保養。">
-
-  <style>
-    :root{
-      --green:#234d43;
-      --green-dark:#173a32;
-      --green-light:#edf4f1;
-      --cream:#f7f4ec;
-      --gold:#b69254;
-      --text:#292929;
-      --muted:#727272;
-      --line:#e5e2da;
-      --white:#ffffff;
-      --red:#a84a43;
-      --shadow:0 10px 35px rgba(30,55,48,.08);
-    }
-
-    *{
-      box-sizing:border-box;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      margin:0;
-      color:var(--text);
-      background:#f3f1eb;
-      font-family:
-        "Noto Sans TC",
-        "PingFang TC",
-        "Microsoft JhengHei",
-        Arial,
-        sans-serif;
-      line-height:1.95;
-      font-size:18px;
-    }
-
-    img{
-      max-width:100%;
-      display:block;
-    }
-
-    a{
-      color:inherit;
-    }
-
-    /* ========================
-       TOP BAR
-    ======================== */
-
-    .site-header{
-      background:var(--green-dark);
-      color:white;
-      border-bottom:4px solid var(--gold);
-    }
-
-    .header-inner{
-      max-width:1120px;
-      height:64px;
-      margin:auto;
-      padding:0 22px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
-
-    .site-name{
-      font-size:15px;
-      font-weight:700;
-      letter-spacing:2px;
-    }
-
-    .site-name span{
-      opacity:.65;
-      font-weight:400;
-      margin-left:8px;
-    }
-
-    .ad-label{
-      border:1px solid rgba(255,255,255,.45);
-      padding:2px 8px;
-      font-size:10px;
-      line-height:18px;
-      letter-spacing:1px;
-      border-radius:3px;
-      opacity:.8;
-    }
-
-    /* ========================
-       BREADCRUMB
-    ======================== */
-
-    .breadcrumb-wrap{
-      background:white;
-      border-bottom:1px solid #eceae5;
-    }
-
-    .breadcrumb{
-      max-width:820px;
-      margin:auto;
-      padding:11px 22px;
-      color:#898989;
-      font-size:13px;
-    }
-
-    .breadcrumb span{
-      margin:0 7px;
-      color:#bbb;
-    }
-
-    /* ========================
-       HERO
-    ======================== */
-
-    .hero{
-      background:
-        linear-gradient(135deg,#f7f5ef 0%,#edf4f1 100%);
-      border-bottom:1px solid #e3e3df;
-    }
-
-    .hero-inner{
-      max-width:820px;
-      margin:auto;
-      padding:52px 22px 48px;
-    }
-
-    .category{
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      color:var(--green);
-      font-size:13px;
-      font-weight:800;
-      letter-spacing:1.5px;
-      margin-bottom:18px;
-    }
-
-    .category:before{
-      content:"";
-      width:24px;
-      height:3px;
-      background:var(--gold);
-    }
-
-    h1{
-      margin:0;
-      color:#202521;
-      font-size:40px;
-      line-height:1.42;
-      letter-spacing:-1.2px;
-      font-weight:900;
-    }
-
-    .article-meta{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-top:22px;
-      color:#888;
-      font-size:13px;
-    }
-
-    .article-meta strong{
-      color:var(--green);
-    }
-
-    /* ========================
-       ARTICLE
-    ======================== */
-
-    main{
-      max-width:820px;
-      margin:0 auto;
-      background:white;
-      box-shadow:var(--shadow);
-    }
-
-    .article{
-      padding:46px 62px 70px;
-    }
-
-    .article p{
-      margin:0 0 22px;
-    }
-
-    .article-opening{
-      font-size:20px;
-    }
-
-    .opening-quote{
-      margin:5px 0 28px;
-      padding:24px 26px;
-      background:var(--green-light);
-      border-left:5px solid var(--green);
-      font-size:25px;
-      font-weight:900;
-      color:var(--green-dark);
-      line-height:1.55;
-    }
-
-    /* ========================
-       SECTION TITLE
-    ======================== */
-
-    .story-section{
-      margin-top:62px;
-      padding-top:8px;
-    }
-
-    .section-no{
-      display:block;
-      color:var(--gold);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:2px;
-      margin-bottom:8px;
-    }
-
-    h2{
-      position:relative;
-      margin:0 0 28px;
-      padding-bottom:17px;
-      color:var(--green-dark);
-      font-size:29px;
-      line-height:1.5;
-      letter-spacing:-.5px;
-      font-weight:900;
-    }
-
-    h2:after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:0;
-      width:54px;
-      height:4px;
-      background:var(--gold);
-      border-radius:10px;
-    }
-
-    /* ========================
-       MEDIA
-    ======================== */
-
-    .media-block{
-      margin:34px -12px;
-    }
-
-    .media-block img{
-      width:100%;
-      border-radius:8px;
-      box-shadow:0 8px 28px rgba(0,0,0,.10);
-    }
-
-    .media-caption{
-      margin-top:9px;
-      padding:0 4px;
-      color:#8a8a8a;
-      font-size:12px;
-      line-height:1.6;
-    }
-
-    .media-tag{
-      display:inline-block;
-      margin-right:7px;
-      color:var(--green);
-      font-weight:800;
-    }
-
-    /* 圖片還沒放入時的預覽框 */
-
-    .image-placeholder{
-      min-height:370px;
-      padding:35px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background:
-        linear-gradient(145deg,#e8efec,#d8e5e0);
-      border-radius:8px;
-      color:#527168;
-      font-size:14px;
-      line-height:1.8;
-    }
-
-    /* ========================
-       YOUTUBE
-    ======================== */
-
-    .video-wrap{
-      margin:34px 0 46px;
-      position:relative;
-      padding-bottom:56.25%;
-      height:0;
-      overflow:hidden;
-      border-radius:8px;
-      background:#111;
-      box-shadow:0 8px 28px rgba(0,0,0,.12);
-    }
-
-    .video-wrap iframe{
-      position:absolute;
-      width:100%;
-      height:100%;
-      top:0;
-      left:0;
-      border:0;
-    }
-
-    /* ========================
-       HIGHLIGHT
-    ======================== */
-
-    .highlight{
-      margin:32px 0;
-      padding:24px 27px;
-      background:#faf7ef;
-      border-top:1px solid #eadfc8;
-      border-bottom:1px solid #eadfc8;
-      color:#45413a;
-      font-size:20px;
-      font-weight:700;
-    }
-
-    .dialogue{
-      font-weight:700;
-      color:#333;
-    }
-
-    /* ========================
-       SCIENCE BLOCK
-    ======================== */
-
-    .science-box{
-      margin:32px 0;
-      padding:27px 29px;
-      background:#f0f5f3;
-      border-radius:8px;
-      border:1px solid #dce8e4;
-    }
-
-    .science-label{
-      display:block;
-      margin-bottom:8px;
-      color:var(--green);
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:2px;
-    }
-
-    /* ========================
-       CTA
-    ======================== */
-
-    .cta-block{
-      margin:46px 0;
-      padding:12px;
-      background:linear-gradient(135deg,#f6f0e3,#edf4f1);
-      border:1px solid #e4ded0;
-      border-radius:12px;
-      box-shadow:0 8px 25px rgba(0,0,0,.06);
-    }
-
-    .cta-block a{
-      display:block;
-      text-decoration:none;
-    }
-
-    .cta-block img{
-      width:100%;
-      border-radius:8px;
-    }
-
-    .cta-placeholder{
-      min-height:150px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      flex-direction:column;
-      text-align:center;
-      color:var(--green);
-      font-weight:900;
-    }
-
-    .cta-placeholder small{
-      margin-top:5px;
-      color:#888;
-      font-size:12px;
-      font-weight:400;
-    }
-
-    /* ========================
-       FINAL QUOTE
-    ======================== */
-
-    .final-answer{
-      margin:36px 0;
-      padding:30px 25px;
-      background:var(--green-dark);
-      color:white;
-      text-align:center;
-      border-radius:8px;
-      font-size:29px;
-      font-weight:900;
-      letter-spacing:1px;
-    }
-
-    /* ========================
-       FOOTER
-    ======================== */
-
-    .footer{
-      max-width:820px;
-      margin:0 auto 100px;
-      padding:35px 30px 42px;
-      background:#e8e5dd;
-      color:#676767;
-      font-size:12px;
-      line-height:1.8;
-    }
-
-    .warning{
-      padding-bottom:20px;
-      margin-bottom:18px;
-      border-bottom:1px solid #d3d0c8;
-    }
-
-    .legal-links{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-
-    .legal-links a{
-      color:#4e625c;
-      text-decoration:none;
-    }
-
-    .legal-links a:hover{
-      text-decoration:underline;
-    }
-
-    /* ========================
-       STICKY CTA
-    ======================== */
-
-    .sticky-cta{
-      position:fixed;
-      left:50%;
-      bottom:14px;
-      transform:translateX(-50%);
-      z-index:1000;
-      width:min(620px,calc(100% - 28px));
-      filter:drop-shadow(0 7px 18px rgba(0,0,0,.24));
-    }
-
-    .sticky-cta a{
-      display:block;
-    }
-
-    .sticky-cta img{
-      width:100%;
-      border-radius:9px;
-    }
-
-    .sticky-placeholder{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:58px;
-      background:#2f6657;
-      color:white;
-      border-radius:9px;
-      text-decoration:none;
-      font-size:17px;
-      font-weight:900;
-      letter-spacing:.5px;
-    }
-
-    /* ========================
-       READING PROGRESS
-    ======================== */
-
-    .progress{
-      position:fixed;
-      top:0;
-      left:0;
-      width:0;
-      height:3px;
-      z-index:9999;
-      background:var(--gold);
-    }
-
-    /* ========================
-       MOBILE
-    ======================== */
-
-    @media(max-width:700px){
-
-      body{
-        background:white;
-        font-size:17px;
-        line-height:1.9;
-      }
-
-      .header-inner{
-        height:54px;
-        padding:0 16px;
-      }
-
-      .site-name{
-        font-size:13px;
-      }
-
-      .site-name span{
-        display:none;
-      }
-
-      .breadcrumb{
-        padding:9px 17px;
-        white-space:nowrap;
-        overflow:hidden;
-        text-overflow:ellipsis;
-      }
-
-      .hero-inner{
-        padding:34px 20px 32px;
-      }
-
-      h1{
-        font-size:29px;
-        line-height:1.45;
-        letter-spacing:-.5px;
-      }
-
-      main{
-        width:100%;
-        box-shadow:none;
-      }
-
-      .article{
-        padding:30px 20px 55px;
-      }
-
-      .article-opening{
-        font-size:18px;
-      }
-
-      .opening-quote{
-        margin-top:0;
-        padding:19px 19px;
-        font-size:22px;
-      }
-
-      .story-section{
-        margin-top:48px;
-      }
-
-      h2{
-        font-size:24px;
-        line-height:1.52;
-        padding-bottom:14px;
-      }
-
-      .media-block{
-        margin:28px -20px;
-      }
-
-      .media-block img,
-      .image-placeholder{
-        border-radius:0;
-      }
-
-      .media-caption{
-        padding:0 20px;
-      }
-
-      .image-placeholder{
-        min-height:280px;
-      }
-
-      .highlight{
-        margin-left:-20px;
-        margin-right:-20px;
-        padding:22px 20px;
-        font-size:18px;
-      }
-
-      .science-box{
-        margin-left:-5px;
-        margin-right:-5px;
-        padding:22px 20px;
-      }
-
-      .cta-block{
-        margin-left:-10px;
-        margin-right:-10px;
-      }
-
-      .final-answer{
-        font-size:25px;
-      }
-
-      .footer{
-        margin-bottom:90px;
-        padding:28px 20px 38px;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了</title>
+
+<meta name="description" content="去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了，朋友甚至在後面喊：你走慢一點啦！">
+
+<style>
+
+:root{
+  --main:#9b533d;
+  --main-dark:#754033;
+  --brown:#5d4439;
+  --cream:#fff9ef;
+  --cream-dark:#f6ecdc;
+  --gold:#d6a85e;
+  --text:#33312f;
+  --muted:#77736d;
+  --line:#e8dfd2;
+  --white:#ffffff;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:#eeeae3;
+  color:var(--text);
+  font-family:
+    "Noto Sans TC",
+    "PingFang TC",
+    "Microsoft JhengHei",
+    Arial,
+    sans-serif;
+  font-size:19px;
+  line-height:2;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+}
+
+
+/* ==============================
+   HEADER
+============================== */
+
+.site-header{
+  background:#fff;
+  border-top:4px solid var(--main);
+  border-bottom:1px solid #e7e0d7;
+}
+
+.header-inner{
+  max-width:920px;
+  height:62px;
+  margin:auto;
+  padding:0 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.site-name{
+  color:#754438;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.site-name span{
+  margin-left:8px;
+  color:#999;
+  font-size:12px;
+  font-weight:400;
+  letter-spacing:0;
+}
+
+.ad-label{
+  padding:1px 7px;
+  border:1px solid #bbb;
+  border-radius:3px;
+  color:#888;
+  font-size:10px;
+  line-height:18px;
+}
+
+
+/* ==============================
+   BREADCRUMB
+============================== */
+
+.breadcrumb-wrap{
+  background:#f8f5ef;
+  border-bottom:1px solid #ebe5da;
+}
+
+.breadcrumb{
+  max-width:800px;
+  margin:auto;
+  padding:10px 22px;
+  color:#888;
+  font-size:13px;
+}
+
+.breadcrumb span{
+  margin:0 7px;
+  color:#bbb;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero{
+  background:#fff;
+}
+
+.hero-inner{
+  max-width:800px;
+  margin:auto;
+  padding:38px 30px 35px;
+}
+
+.category{
+  display:inline-block;
+  margin-bottom:15px;
+  padding:5px 13px;
+  background:#f5e8d4;
+  border-radius:20px;
+  color:#89543f;
+  font-size:14px;
+  font-weight:700;
+}
+
+h1{
+  margin:0;
+  color:#2e2b29;
+  font-size:39px;
+  line-height:1.48;
+  font-weight:900;
+  letter-spacing:-1px;
+}
+
+.article-meta{
+  margin-top:20px;
+  padding-top:15px;
+  border-top:1px solid #eee8df;
+  color:#999;
+  font-size:13px;
+}
+
+
+/* ==============================
+   ARTICLE
+============================== */
+
+main{
+  max-width:800px;
+  margin:0 auto;
+  background:#fff;
+}
+
+.article{
+  padding:36px 55px 75px;
+}
+
+.article p{
+  margin:0 0 22px;
+}
+
+.article-opening{
+  font-size:20px;
+}
+
+
+/* ==============================
+   OPENING QUOTE
+============================== */
+
+.opening-quote{
+  position:relative;
+  margin:4px 0 30px;
+  padding:22px 25px;
+  background:#fff6e6;
+  border-radius:5px;
+  color:#754438;
+  font-size:25px;
+  line-height:1.6;
+  font-weight:900;
+}
+
+.opening-quote:before{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:5px;
+  background:#d09a5b;
+}
+
+
+/* ==============================
+   SECTION
+============================== */
+
+.story-section{
+  margin-top:58px;
+}
+
+h2{
+  margin:0 0 28px;
+  padding:15px 18px 15px 20px;
+  background:#f8efe1;
+  border-left:6px solid #b86e4e;
+  border-radius:0 5px 5px 0;
+  color:#563c33;
+  font-size:27px;
+  line-height:1.55;
+  font-weight:900;
+  letter-spacing:-.3px;
+}
+
+
+/* ==============================
+   DIALOGUE
+============================== */
+
+.dialogue{
+  color:#4c403b;
+  font-weight:800;
+}
+
+
+/* ==============================
+   HIGHLIGHT
+============================== */
+
+.highlight{
+  margin:30px 0;
+  padding:23px 25px;
+  background:#fff8e8;
+  border-top:1px solid #eddab3;
+  border-bottom:1px solid #eddab3;
+  color:#5f4639;
+  font-size:20px;
+  line-height:1.8;
+  font-weight:800;
+}
+
+
+/* ==============================
+   SCIENCE / INGREDIENT
+============================== */
+
+.science-box{
+  margin:28px 0;
+  padding:22px 24px;
+  background:#faf4e9;
+  border:1px solid #eadfce;
+  border-radius:5px;
+}
+
+.science-box p:last-child{
+  margin-bottom:0;
+}
+
+
+/* ==============================
+   IMAGES
+============================== */
+
+.media-block{
+  margin:34px 0 38px;
+}
+
+.media-block img{
+  width:100%;
+  border-radius:6px;
+}
+
+.media-caption{
+  margin-top:10px;
+  padding:0 3px;
+  color:#888;
+  font-size:13px;
+  line-height:1.7;
+}
+
+
+/* 圖片還沒上傳時顯示 */
+
+.image-placeholder{
+  min-height:340px;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#f3ede3;
+  border:1px solid #e3d8c9;
+  border-radius:6px;
+  color:#8a7668;
+  font-size:14px;
+  line-height:1.8;
+}
+
+
+/* ==============================
+   YOUTUBE
+============================== */
+
+.video-wrap{
+  position:relative;
+  width:100%;
+  height:0;
+  margin:32px 0 45px;
+  padding-bottom:56.25%;
+  overflow:hidden;
+  background:#222;
+  border-radius:6px;
+}
+
+.video-wrap iframe{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+
+/* ==============================
+   CTA
+============================== */
+
+.cta-block{
+  margin:42px -8px;
+  padding:8px;
+  background:#fff7e9;
+  border:1px solid #eadbc3;
+  border-radius:7px;
+}
+
+.cta-note{
+  padding:6px 8px 10px;
+  color:#806858;
+  font-size:13px;
+  text-align:center;
+}
+
+.cta-block a{
+  display:block;
+  text-decoration:none;
+}
+
+.cta-block img{
+  width:100%;
+  border-radius:4px;
+}
+
+
+/* GIF 還沒放時可用 */
+
+.cta-placeholder{
+  min-height:130px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  background:#f3dfbd;
+  border-radius:5px;
+  color:#754438;
+  font-size:21px;
+  font-weight:900;
+  text-align:center;
+}
+
+.cta-placeholder small{
+  margin-top:5px;
+  font-size:13px;
+  font-weight:400;
+}
+
+
+/* ==============================
+   FINAL ANSWER
+============================== */
+
+.final-answer{
+  margin:32px 0 12px;
+  padding:25px;
+  background:#fff3db;
+  border-top:2px solid #d7ad68;
+  border-bottom:2px solid #d7ad68;
+  color:#6c4433;
+  font-size:27px;
+  line-height:1.6;
+  font-weight:900;
+  text-align:center;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer{
+  max-width:800px;
+  margin:0 auto 95px;
+  padding:30px 35px 38px;
+  background:#f4f0e8;
+  border-top:1px solid #ded8cd;
+  color:#777;
+  font-size:12px;
+  line-height:1.8;
+}
+
+.warning{
+  margin-bottom:18px;
+  padding-bottom:18px;
+  border-bottom:1px solid #ddd6ca;
+}
+
+.legal-links{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.legal-links a{
+  color:#6e625a;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+
+/* ==============================
+   STICKY CTA
+============================== */
+
+.sticky-cta{
+  position:fixed;
+  left:50%;
+  bottom:12px;
+  z-index:1000;
+  width:min(620px,calc(100% - 24px));
+  transform:translateX(-50%);
+  filter:drop-shadow(0 5px 15px rgba(0,0,0,.2));
+}
+
+.sticky-cta a{
+  display:block;
+  text-decoration:none;
+}
+
+.sticky-cta img{
+  width:100%;
+  border-radius:7px;
+}
+
+.sticky-placeholder{
+  min-height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#b45c3e;
+  border-bottom:4px solid #88432e;
+  border-radius:7px;
+  color:#fff;
+  font-size:19px;
+  font-weight:900;
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:700px){
+
+  body{
+    background:#fff;
+    font-size:18px;
+    line-height:1.95;
+  }
+
+  .header-inner{
+    height:54px;
+    padding:0 17px;
+  }
+
+  .site-name{
+    font-size:17px;
+  }
+
+  .site-name span{
+    display:none;
+  }
+
+  .breadcrumb{
+    padding:8px 17px;
+    font-size:12px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .hero-inner{
+    padding:28px 20px 27px;
+  }
+
+  .category{
+    margin-bottom:12px;
+    font-size:13px;
+  }
+
+  h1{
+    font-size:29px;
+    line-height:1.5;
+    letter-spacing:-.5px;
+  }
+
+  .article-meta{
+    margin-top:16px;
+    padding-top:13px;
+  }
+
+  main{
+    width:100%;
+  }
+
+  .article{
+    padding:29px 20px 60px;
+  }
+
+  .article-opening{
+    font-size:19px;
+  }
+
+  .opening-quote{
+    margin-bottom:25px;
+    padding:18px;
+    font-size:22px;
+  }
+
+  .story-section{
+    margin-top:48px;
+  }
+
+  h2{
+    margin-left:-20px;
+    margin-right:-20px;
+    padding:14px 20px;
+    border-left:5px solid #b86e4e;
+    border-radius:0;
+    font-size:23px;
+    line-height:1.55;
+  }
+
+  .media-block{
+    margin:30px -20px 34px;
+  }
+
+  .media-block img{
+    border-radius:0;
+  }
+
+  .media-caption{
+    padding:0 20px;
+  }
+
+  .image-placeholder{
+    min-height:260px;
+    border-radius:0;
+  }
+
+  .highlight{
+    margin-left:-5px;
+    margin-right:-5px;
+    padding:20px;
+    font-size:19px;
+  }
+
+  .science-box{
+    margin-left:-5px;
+    margin-right:-5px;
+    padding:20px;
+  }
+
+  .cta-block{
+    margin:38px -15px;
+  }
+
+  .final-answer{
+    margin-left:-5px;
+    margin-right:-5px;
+    padding:22px 15px;
+    font-size:25px;
+  }
+
+  .footer{
+    width:100%;
+    margin-bottom:90px;
+    padding:26px 20px 35px;
+  }
+
+  .sticky-placeholder{
+    min-height:58px;
+    font-size:18px;
+  }
+
+}
+
+</style>
 </head>
 
 
 <body>
 
-<div class="progress" id="progress"></div>
+
+<!-- =====================================
+     HEADER
+===================================== -->
 
 <header class="site-header">
+
   <div class="header-inner">
+
     <div class="site-name">
-      健康生活專題
-      <span>HEALTH & LIFE</span>
+      好好過生活
+      <span>健康・日常・熟齡</span>
     </div>
 
     <div class="ad-label">AD</div>
+
   </div>
+
 </header>
 
 
+<!-- =====================================
+     BREADCRUMB
+===================================== -->
+
 <div class="breadcrumb-wrap">
+
   <div class="breadcrumb">
-    首頁 <span>›</span> 健康生活 <span>›</span> 熟齡行動保養
+    首頁 <span>›</span>
+    健康生活 <span>›</span>
+    日常保養
   </div>
+
 </div>
 
 
+<!-- =====================================
+     HERO
+===================================== -->
+
 <section class="hero">
+
   <div class="hero-inner">
 
     <div class="category">
-      熟齡生活・健康專題
+      熟齡生活｜日常保養
     </div>
 
     <h1>
@@ -656,18 +689,25 @@
     </h1>
 
     <div class="article-meta">
-      <strong>健康生活編輯部</strong>
-      <span>專題內容</span>
-      <span>約 8 分鐘閱讀</span>
+      健康生活分享
     </div>
 
   </div>
+
 </section>
 
 
+
+<!-- =====================================
+     ARTICLE
+===================================== -->
+
 <main>
+
 <article class="article">
 
+
+<!-- 開頭 -->
 
 <div class="opening-quote">
   「老周，你走慢一點啦！」
@@ -694,24 +734,30 @@
 </div>
 
 
-<!-- =======================
+
+<!-- =====================================
      YOUTUBE
-     把 VIDEO_ID 換成影片 ID
-======================= -->
+     VIDEO_ID 換成你的影片 ID
+===================================== -->
 
 <div class="video-wrap">
+
   <iframe
     src="https://www.youtube.com/embed/VIDEO_ID"
     title="YouTube video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen>
   </iframe>
+
 </div>
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第一段
+===================================== -->
 
-<span class="section-no">STORY 01</span>
+<section class="story-section">
 
 <h2>下個車而已，那隻腳卻差點沒接住自己</h2>
 
@@ -742,12 +788,7 @@
 
   <img
     src="assets/bus-knee-medical.jpg"
-    alt="60多歲男性從遊覽車階梯往下踩，膝關節醫學透視">
-
-  <figcaption class="media-caption">
-    <span class="media-tag">HEALTH VISUAL</span>
-    日常上下階梯時，身體需要完成重心轉移與關節活動等一連串動作。
-  </figcaption>
+    alt="60幾歲亞洲男性從遊覽車階梯往下踩">
 
 </figure>
 
@@ -772,9 +813,11 @@
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第二段
+===================================== -->
 
-<span class="section-no">STORY 02</span>
+<section class="story-section">
 
 <h2>以前朋友聊保養他都沒興趣，這次換他自己開口問</h2>
 
@@ -816,9 +859,11 @@
 
 <p>阿明伸出兩根手指。</p>
 
+
 <div class="highlight">
-  「一個甲魚膠，一個彈性蛋白。我現在這兩個是一起顧。」
+「一個甲魚膠，一個彈性蛋白。我現在這兩個是一起顧。」
 </div>
+
 
 <p>講完還特別補了一句：</p>
 
@@ -837,23 +882,38 @@
 <p>老周嘴上罵他一句「講一半的」，心裡倒真的把這兩個名字記下來了。</p>
 
 
-<!-- CTA 1 -->
+
+<!-- =====================================
+     CTA：填寫表單 GIF
+
+     href 換成你的表單網址
+===================================== -->
 
 <div class="cta-block">
-  <a href="#form">
+
+  <div class="cta-note">
+    想進一步了解，可以從這裡看看
+  </div>
+
+  <a href="REPLACE_FORM_URL">
+
     <img
       src="assets/cta-form.gif"
       alt="填寫表單">
+
   </a>
+
 </div>
 
 </section>
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第三段
+===================================== -->
 
-<span class="section-no">KNOWLEDGE</span>
+<section class="story-section">
 
 <h2>朋友那天講的兩個東西，他回家後還真的查了</h2>
 
@@ -869,13 +929,13 @@
 
 <p>兩個人就這樣一邊看、一邊聊。</p>
 
-<div class="science-box">
 
-<span class="science-label">NUTRITION NOTE</span>
+<div class="science-box">
 
 <p>老周才慢慢搞懂，甲魚膠裡有豐富的膠原相關營養；而彈性蛋白，講的是組織本身延展、回彈這一塊。</p>
 
 </div>
+
 
 <p>「所以阿明才會兩個一起吃喔？」</p>
 
@@ -890,6 +950,7 @@
 <p>原來有些彈性蛋白胜肽，會從鰹魚的動脈球取得。這個部位本來就會隨著心臟跳動不斷伸縮，因此含有豐富的彈性蛋白。</p>
 
 
+
 <!-- 圖片 2 -->
 
 <figure class="media-block">
@@ -897,11 +958,6 @@
   <img
     src="assets/bonito-bulbus-elastin.jpg"
     alt="鰹魚動脈球與彈性蛋白示意圖">
-
-  <figcaption class="media-caption">
-    <span class="media-tag">INGREDIENT STORY</span>
-    鰹魚、動脈球與彈性蛋白的原料來源示意。
-  </figcaption>
 
 </figure>
 
@@ -926,9 +982,11 @@
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第四段
+===================================== -->
 
-<span class="section-no">STORY 03</span>
+<section class="story-section">
 
 <h2>那次差點真的摔下去，鐵齒了大半輩子的他終於怕了</h2>
 
@@ -951,17 +1009,14 @@
 <p>騎機車要出門，抬腳就能跨上去，不用站在旁邊喬半天。遊覽車門一開，跟著大家下車就好，不用先盯著下面那一階，想著等等要怎麼踩。</p>
 
 
+
 <!-- 圖片 3 -->
 
 <figure class="media-block">
 
   <img
     src="assets/scooter-stepover.jpg"
-    alt="60多歲男性準備跨上機車">
-
-  <figcaption class="media-caption">
-    對很多人來說，真正想維持的，其實就是這些再普通不過的日常。
-  </figcaption>
+    alt="60幾歲亞洲男性準備騎機車出門">
 
 </figure>
 
@@ -970,17 +1025,20 @@
 
 <p>他也不想第一個想到的，是那邊樓梯多不多、自己走不走得完。</p>
 
+
 <div class="highlight">
-  能想去就去，不用每次出門前，都先替自己的腳想那麼多。
+能想去就去，不用每次出門前，都先替自己的腳想那麼多。
 </div>
 
 </section>
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第五段
+===================================== -->
 
-<span class="section-no">CHANGE</span>
+<section class="story-section">
 
 <h2>「欸，你最近上車怎麼變快了？」老婆比他自己還早發現</h2>
 
@@ -1013,26 +1071,39 @@
 <p>原來他最有感的，不是突然變得多厲害。</p>
 
 
-<!-- CTA 2 LINE -->
+
+<!-- =====================================
+     CTA：LINE GIF
+===================================== -->
 
 <div class="cta-block">
+
+  <div class="cta-note">
+    想了解更多日常保養資訊
+  </div>
+
   <a
     href="REPLACE_LINE_URL"
     target="_blank"
     rel="noopener">
+
     <img
       src="assets/cta-line.gif"
       alt="加入 LINE 官方帳號">
+
   </a>
+
 </div>
 
 </section>
 
 
 
-<section class="story-section">
+<!-- =====================================
+     第六段
+===================================== -->
 
-<span class="section-no">ONE YEAR LATER</span>
+<section class="story-section">
 
 <h2>一年後再跟這群朋友出遊，大家都在看他這次怎麼下車</h2>
 
@@ -1060,9 +1131,11 @@
 
 <p>「蛤？」</p>
 
+
 <div class="opening-quote">
-  「你走慢一點啦！」
+「你走慢一點啦！」
 </div>
+
 
 <p>老周站在前面，當場笑出來。</p>
 
@@ -1082,9 +1155,11 @@
 
 
 
-<section class="story-section">
+<!-- =====================================
+     最後一段
+===================================== -->
 
-<span class="section-no">LIFE GOES ON</span>
+<section class="story-section">
 
 <h2>去年差點摔倒、今年走在最前面，老周自己最有感的卻不是這件事</h2>
 
@@ -1118,81 +1193,82 @@
 
 <p>阿明才剛傳完，老周沒過多久就回了。</p>
 
+
 <div class="final-answer">
-  「我啊，算我一個。」
+「我啊，算我一個。」
 </div>
 
 </section>
 
 
 </article>
+
 </main>
 
 
 
+<!-- =====================================
+     FOOTER
+===================================== -->
+
 <footer class="footer">
 
-  <div class="warning">
-    本頁內容僅供健康資訊參考，不作為醫療診斷、治療或處方依據；如有身體不適，請洽專業醫療人員。
-    填寫表單或加入官方帳號後，您可能會收到產品資訊、優惠活動、健康資訊或客服聯繫等相關訊息。
-  </div>
+<div class="warning">
 
-  <div class="legal-links">
-    <a href="terms.html">Terms &amp; Conditions</a>
-    <span>｜</span>
-    <a href="privacy.html">Privacy Policy</a>
-    <span>｜</span>
-    <a href="research.html">Scientific Research</a>
-  </div>
+本頁內容僅供健康資訊參考，不作為醫療診斷、治療或處方依據；如有身體不適，請洽專業醫療人員。
+
+<br><br>
+
+填寫表單或加入官方帳號後，您可能會收到產品資訊、優惠活動、健康資訊或客服聯繫等相關訊息。
+
+</div>
+
+
+<div class="legal-links">
+
+<a href="terms.html">
+Terms &amp; Conditions
+</a>
+
+<span>｜</span>
+
+<a href="privacy.html">
+Privacy Policy
+</a>
+
+<span>｜</span>
+
+<a href="research.html">
+Scientific Research
+</a>
+
+</div>
 
 </footer>
 
 
 
-<!-- =======================
-     底部懸浮 CTA
-======================= -->
+<!-- =====================================
+     底部懸浮電話 CTA
+
+     有 GIF 後：
+     把 sticky-placeholder
+     換成
+     <img src="assets/cta-call.gif">
+===================================== -->
 
 <div class="sticky-cta">
 
-  <a href="tel:REPLACE_PHONE">
+<a href="tel:REPLACE_PHONE">
 
-    <!--
-    有正式 GIF 後改成：
+<div class="sticky-placeholder">
+立即了解更多資訊
+</div>
 
-    <img src="assets/cta-call.gif" alt="立即來電">
-    -->
-
-    <div class="sticky-placeholder">
-      立即了解更多資訊
-    </div>
-
-  </a>
+</a>
 
 </div>
 
-
-
-<script>
-  /* 閱讀進度條 */
-  window.addEventListener("scroll", function () {
-    const scrollTop =
-      document.documentElement.scrollTop ||
-      document.body.scrollTop;
-
-    const scrollHeight =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-
-    const progress =
-      scrollHeight > 0
-        ? (scrollTop / scrollHeight) * 100
-        : 0;
-
-    document.getElementById("progress").style.width =
-      progress + "%";
-  });
-</script>
 
 </body>
 </html>

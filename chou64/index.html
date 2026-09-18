@@ -103,24 +103,31 @@ a{
    麵包屑
 ========================= */
 
-.breadcrumb-area{
-  background:#faf9f6;
-  border-bottom:1px solid #ece8e2;
-}
-
 .breadcrumb{
-  width:min(100% - 36px, 740px);
-  margin:auto;
-  padding:9px 0;
-  color:#888;
+  width:100%;
+  margin:0 0 14px;
+  padding:0;
+  color:#8a817c;
   font-size:13px;
+  line-height:1.6;
 }
 
 .breadcrumb span{
-  padding:0 7px;
+  padding:0 6px;
   color:#bbb;
 }
 
+.category{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:3px 9px;
+  background:#a14f36;
+  color:#fff;
+  border-radius:2px;
+  font-size:13px;
+  line-height:1.6;
+  font-weight:800;
+}
 
 /* =========================
    文章本體
@@ -614,23 +621,6 @@ h2:before{
 
 
 <!-- =========================
-     麵包屑
-========================= -->
-
-<div class="breadcrumb-area">
-
-<div class="breadcrumb">
-  樂齡專區
-  <span>›</span>
-  日常保養
-  <span>›</span>
-  行動力
-</div>
-
-</div>
-
-
-<!-- =========================
      文章
 ========================= -->
 
@@ -641,34 +631,23 @@ h2:before{
 
 <header class="article-header">
 
-<div class="category">
-  生活專題
-</div>
+  <div class="breadcrumb">
+    樂齡專區
+    <span>›</span>
+    日常保養
+    <span>›</span>
+    行動力
+  </div>
+
+  <div class="category">
+    生活專題
+  </div>
 
   <h1>
     去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了，朋友甚至在後面喊：「你走慢一點啦！」
   </h1>
 
-
 </header>
-
-
-<!-- =========================
-     YOUTUBE
-
-     VIDEO_ID 換成正式影片 ID
-========================= -->
-
-<div class="hero-video">
-
-  <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID"
-    title="YouTube video"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-
-</div>
 
 
 <div class="article-body">
@@ -698,7 +677,23 @@ h2:before{
 
 <p>只有他自己知道，那一下其實把他嚇到了。</p>
 
+<!-- =========================
+     YOUTUBE
 
+     VIDEO_ID 換成正式影片 ID
+========================= -->
+
+<div class="hero-video">
+
+  <iframe
+    src="https://www.youtube.com/embed/VIDEO_ID"
+    title="YouTube video"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+</div>
+   
 <!-- =========================
      第一段
 ========================= -->

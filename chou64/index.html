@@ -44,7 +44,11 @@ body{
     Arial,
     sans-serif;
   font-size:21px;
-  line-height:1.95;
+  line-height:1.75;
+}
+
+.article-body p{
+  margin:0 0 18px;
 }
 
 img{
@@ -198,10 +202,6 @@ h1{
   padding:38px 0 75px;
 }
 
-.article-body p{
-  margin:0 0 24px;
-}
-
 
 /* =========================
    開頭第一句
@@ -222,7 +222,7 @@ h1{
 
 h2{
   position:relative;
-  margin:60px 0 28px;
+  margin:45px 0 20px;
   padding:0 0 15px 18px;
   color:#3d3633;
   font-size:30px;
@@ -441,13 +441,16 @@ h2:before{
 /* =========================
    手機版
 ========================= */
-
 @media(max-width:700px){
 
   body{
     background:#fff;
     font-size:20px;
-    line-height:1.95;
+    line-height:1.7;
+  }
+
+  .article-body p{
+    margin-bottom:17px;
   }
 
   .header-inner{
@@ -498,21 +501,17 @@ h2:before{
     padding:31px 0 62px;
   }
 
-  .article-body p{
-    margin-bottom:23px;
-  }
-
   .lead-dialogue{
     font-size:26px;
   }
 
-  h2{
-    margin:51px 0 26px;
-    padding-left:15px;
-    padding-bottom:13px;
-    font-size:27px;
-    line-height:1.55;
-  }
+h2{
+  margin:38px 0 18px;
+  padding-left:15px;
+  padding-bottom:13px;
+  font-size:27px;
+  line-height:1.55;
+}
 
   h2:before{
     top:7px;

@@ -1,19 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了</title>
+<title>去年下遊覽車差點跌倒，今年連九份那堆階梯都走完了，朋友甚至追著喊：「你走慢一點啦！」</title>
 
-<meta name="description" content="去年下遊覽車還差點跌倒，今年連九份那一堆階梯都走完了，朋友甚至在後面喊：你走慢一點啦！">
+<meta name="description" content="去年下遊覽車差點跌倒，今年連九份那堆階梯都走完了，朋友甚至追著喊：「你走慢一點啦！」">
 
 <style>
-
 /* =========================
    基本設定
 ========================= */
-
 :root{
   --main:#a14f36;
   --main-dark:#713b2c;
@@ -25,74 +24,47 @@
   --page:#f2f0eb;
 }
 
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 
 body{
   margin:0;
   background:var(--page);
   color:var(--text);
-  font-family:
-    "Noto Sans TC",
-    "PingFang TC",
-    "Microsoft JhengHei",
-    Arial,
-    sans-serif;
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;
   font-size:21px;
   line-height:1.75;
 }
 
-.article-body p{
-  margin:0 0 18px;
-}
+.article-body p{margin:0 0 18px}
+img{display:block;max-width:100%}
+a{color:inherit}
 
-img{
-  display:block;
-  max-width:100%;
-}
-
-a{
-  color:inherit;
-}
-
-
-/* =========================
-   最上方
-========================= */
-
+/* 網站上方 */
 .site-header{
   background:#fff;
   border-top:4px solid var(--main);
   border-bottom:1px solid #e8e4de;
 }
-
 .header-inner{
-  width:min(100% - 36px, 820px);
+  width:min(100% - 36px,820px);
   height:58px;
   margin:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
-
 .site-name{
   color:#60473e;
   font-size:19px;
   font-weight:900;
 }
-
 .site-sub{
   margin-left:8px;
   color:#999;
   font-size:12px;
   font-weight:400;
 }
-
 .ad{
   padding:1px 7px;
   border:1px solid #bdbdbd;
@@ -102,11 +74,7 @@ a{
   line-height:18px;
 }
 
-
-/* =========================
-   麵包屑
-========================= */
-
+/* 麵包屑 */
 .breadcrumb{
   width:100%;
   margin:0 0 14px;
@@ -115,40 +83,33 @@ a{
   font-size:13px;
   line-height:1.6;
 }
-
 .breadcrumb span{
   padding:0 6px;
   color:#bbb;
 }
-
 .category{
   display:inline-block;
   margin-bottom:14px;
   padding:5px 10px;
   background:#a14f36;
-  color:#ffffff;
+  color:#fff;
   border-radius:3px;
   font-size:14px;
   line-height:1.5;
   font-weight:800;
 }
 
-/* =========================
-   文章本體
-========================= */
-
+/* 文章本體 */
 .article-wrap{
-  width:min(100%, 800px);
+  width:min(100%,800px);
   margin:0 auto;
   background:#fff;
 }
-
 .article-header{
-  width:min(100% - 70px, 690px);
+  width:min(100% - 70px,690px);
   margin:auto;
   padding:39px 0 30px;
 }
-
 h1{
   margin:0;
   color:#292929;
@@ -157,7 +118,6 @@ h1{
   letter-spacing:-.8px;
   font-weight:900;
 }
-
 .meta{
   margin-top:18px;
   padding-top:14px;
@@ -166,11 +126,7 @@ h1{
   font-size:13px;
 }
 
-
-/* =========================
-   影片
-========================= */
-
+/* 影片 */
 .hero-video{
   width:100%;
   position:relative;
@@ -181,7 +137,6 @@ h1{
   background:#222;
   border-radius:6px;
 }
-
 .hero-video iframe{
   position:absolute;
   top:0;
@@ -191,22 +146,14 @@ h1{
   border:0;
 }
 
-
-/* =========================
-   內文
-========================= */
-
+/* 內文 */
 .article-body{
-  width:min(100% - 70px, 690px);
+  width:min(100% - 70px,690px);
   margin:auto;
   padding:38px 0 75px;
 }
 
-
-/* =========================
-   開頭第一句
-========================= */
-
+/* 開頭第一句 */
 .lead-dialogue{
   margin:0 0 29px;
   color:#784838;
@@ -215,11 +162,7 @@ h1{
   font-weight:900;
 }
 
-
-/* =========================
-   小標
-========================= */
-
+/* 小標 */
 h2{
   position:relative;
   margin:45px 0 20px;
@@ -231,7 +174,6 @@ h2{
   letter-spacing:-.3px;
   border-bottom:1px solid #e5dfd7;
 }
-
 h2:before{
   content:"";
   position:absolute;
@@ -243,31 +185,21 @@ h2:before{
   border-radius:4px;
 }
 
-
-/* =========================
-   對話
-========================= */
-
+/* 對話 */
 .dialogue{
   font-weight:800;
   color:#453b37;
 }
 
-
-/* =========================
-   圖片
-========================= */
-
+/* 圖片 */
 .article-image{
   margin:34px -20px 38px;
 }
-
 .article-image img{
   width:calc(100% + 40px);
   max-width:none;
   margin-left:-20px;
 }
-
 .article-image figcaption{
   width:calc(100% + 40px);
   margin-left:-20px;
@@ -277,11 +209,7 @@ h2:before{
   line-height:1.65;
 }
 
-
-/* =========================
-   重點句
-========================= */
-
+/* 重點句 */
 .key-quote{
   margin:32px 0;
   padding:23px 25px;
@@ -293,11 +221,7 @@ h2:before{
   font-weight:900;
 }
 
-
-/* =========================
-   成分補充
-========================= */
-
+/* 成分補充 */
 .info-note{
   margin:29px 0;
   padding:22px 24px;
@@ -305,16 +229,9 @@ h2:before{
   border-top:1px solid #e8e0d5;
   border-bottom:1px solid #e8e0d5;
 }
+.info-note p{margin:0}
 
-.info-note p{
-  margin:0;
-}
-
-
-/* =========================
-   CTA
-========================= */
-
+/* CTA */
 .article-cta{
   margin:45px -5px;
   padding:18px;
@@ -322,24 +239,20 @@ h2:before{
   border-radius:7px;
   text-align:center;
 }
-
 .cta-text{
   margin-bottom:12px;
   color:#765242;
   font-size:17px;
   font-weight:800;
 }
-
 .article-cta a{
   display:block;
   text-decoration:none;
 }
-
 .article-cta img{
   width:100%;
   border-radius:5px;
 }
-
 .cta-fallback{
   padding:18px 20px;
   background:var(--main);
@@ -349,11 +262,7 @@ h2:before{
   font-weight:900;
 }
 
-
-/* =========================
-   最後一句
-========================= */
-
+/* 最後一句 */
 .final-line{
   margin:32px 0 0;
   padding:24px 20px;
@@ -366,13 +275,9 @@ h2:before{
   font-weight:900;
 }
 
-
-/* =========================
-   Footer
-========================= */
-
+/* Footer */
 .footer{
-  width:min(100%, 800px);
+  width:min(100%,800px);
   margin:0 auto 90px;
   padding:30px 40px 38px;
   background:#eeeae3;
@@ -381,49 +286,37 @@ h2:before{
   line-height:1.9;
   text-align:center;
 }
-
 .warning{
   padding-bottom:18px;
   margin-bottom:17px;
   border-bottom:1px solid #d7d2ca;
   text-align:center;
 }
-
-.legal{
-  text-align:center;
-}
-
+.legal{text-align:center}
 .legal a{
   color:#655d58;
   text-decoration:underline;
   text-underline-offset:2px;
 }
 
-
-/* =========================
-   底部懸浮 CTA
-========================= */
-
+/* 底部懸浮 CTA */
 .sticky-cta{
   position:fixed;
   z-index:999;
   left:50%;
   bottom:12px;
   transform:translateX(-50%);
-  width:min(600px, calc(100% - 24px));
+  width:min(600px,calc(100% - 24px));
   filter:drop-shadow(0 4px 12px rgba(0,0,0,.22));
 }
-
 .sticky-cta a{
   display:block;
   text-decoration:none;
 }
-
 .sticky-cta img{
   width:100%;
   border-radius:6px;
 }
-
 .sticky-fallback{
   min-height:60px;
   display:flex;
@@ -437,35 +330,20 @@ h2:before{
   font-weight:900;
 }
 
-
-/* =========================
-   手機版
-========================= */
+/* 手機版 */
 @media(max-width:700px){
-
   body{
     background:#fff;
     font-size:20px;
     line-height:1.7;
   }
-
-  .article-body p{
-    margin-bottom:17px;
-  }
-
+  .article-body p{margin-bottom:17px}
   .header-inner{
     width:calc(100% - 32px);
     height:54px;
   }
-
-  .site-name{
-    font-size:18px;
-  }
-
-  .site-sub{
-    display:none;
-  }
-
+  .site-name{font-size:18px}
+  .site-sub{display:none}
   .breadcrumb{
     width:calc(100% - 34px);
     padding:8px 0;
@@ -474,95 +352,70 @@ h2:before{
     overflow:hidden;
     text-overflow:ellipsis;
   }
-
-  .article-wrap{
-    width:100%;
-  }
-
+  .article-wrap{width:100%}
   .article-header{
     width:calc(100% - 40px);
     padding:28px 0 25px;
   }
-
   h1{
     font-size:32px;
     line-height:1.5;
     letter-spacing:-.5px;
   }
-
   .meta{
     margin-top:15px;
     padding-top:12px;
     font-size:14px;
   }
-
   .article-body{
     width:calc(100% - 40px);
     padding:31px 0 62px;
   }
-
-  .lead-dialogue{
-    font-size:26px;
+  .lead-dialogue{font-size:26px}
+  h2{
+    margin:38px 0 18px;
+    padding-left:15px;
+    padding-bottom:13px;
+    font-size:27px;
+    line-height:1.55;
   }
-
-h2{
-  margin:38px 0 18px;
-  padding-left:15px;
-  padding-bottom:13px;
-  font-size:27px;
-  line-height:1.55;
-}
-
   h2:before{
     top:7px;
     bottom:18px;
     width:4px;
   }
-
-  .article-image{
-    margin:31px -20px 35px;
-  }
-
+  .article-image{margin:31px -20px 35px}
   .article-image img{
     width:100%;
     margin:0;
   }
-
   .article-image figcaption{
     width:100%;
     margin:0;
     padding:8px 20px 0;
     font-size:14px;
   }
-
   .key-quote{
     margin:29px -3px;
     padding:21px 20px;
     font-size:22px;
   }
-
   .info-note{
     margin-left:-5px;
     margin-right:-5px;
     padding:20px;
   }
-
   .article-cta{
     margin:40px -10px;
     padding:14px;
   }
-
-  .cta-text{
-    font-size:17px;
-  }
-
+  .cta-text{font-size:17px}
   .final-line{
     margin-left:-3px;
     margin-right:-3px;
     padding:24px 18px;
     font-size:28px;
   }
-
   .footer{
     width:100%;
     margin-bottom:85px;
@@ -571,55 +424,29 @@ h2{
     line-height:1.9;
     text-align:center;
   }
-
-  .warning{
-    text-align:center;
-  }
-
-  .sticky-fallback{
-    font-size:20px;
-  }
-
+  .warning{text-align:center}
+  .sticky-fallback{font-size:20px}
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     網站上方
-========================= -->
-
+<!-- 網站上方 -->
 <header class="site-header">
-
   <div class="header-inner">
-
-   <div class="site-name">
-  好好過生活
-  <span class="site-sub">健康・熟齡</span>
-</div>
-
+    <div class="site-name">
+      好好過生活
+      <span class="site-sub">健康・熟齡</span>
+    </div>
     <div class="ad">AD</div>
-
   </div>
-
 </header>
 
-
-<!-- =========================
-     文章
-========================= -->
-
+<!-- 文章 -->
 <div class="article-wrap">
 
-
-<!-- 標題 -->
-
 <header class="article-header">
-
   <div class="breadcrumb">
     樂齡專區
     <span>›</span>
@@ -628,23 +455,14 @@ h2{
     行動力
   </div>
 
-  <div class="category">
-    生活專題
-  </div>
+  <div class="category">生活專題</div>
 
-  <h1>
-    去年下遊覽車差點跌倒，今年連九份那堆階梯都走完了，朋友甚至在後面喊：「你走慢一點啦！」
-  </h1>
-
+  <h1>去年下遊覽車差點跌倒，今年連九份那堆階梯都走完了，朋友甚至追著喊：「你走慢一點啦！」</h1>
 </header>
-
 
 <div class="article-body">
 
-
-<div class="lead-dialogue">
-「老周，你走慢一點啦！」
-</div>
+<div class="lead-dialogue">「老周，你走慢一點啦！」</div>
 
 <p>前陣子一群老朋友到九份走走，才爬過一段階梯，後面就有人開始喊。</p>
 <p>64歲的老周回頭看了一眼，還故意回嘴：「是你們太慢吧！」</p>
@@ -652,12 +470,8 @@ h2{
 <p>當時朋友拉了他一把，嘴上還笑他真的老了</p>
 <p>老周也跟著笑，但只有他自己知道，那一下其實把他嚇到了。</p>
 
-<!-- =========================
-     YOUTUBE
-========================= -->
-
+<!-- YouTube 影片：保留原網址 -->
 <div class="hero-video">
-
   <iframe
     src="https://www.youtube.com/embed/hQPPopzTIL0?si=JTvUKIer3ugRtDtN"
     title="YouTube video player"
@@ -665,10 +479,10 @@ h2{
     referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen>
   </iframe>
-
 </div>
 
-<h2>下個車而已，那隻腳卻差點沒接住自己</h2>
+<h2>下個車而已，那隻腳卻差點撐不住</h2>
+
 <p>老周年輕時很愛往外跑，爬山、騎車、釣魚，朋友約去哪裡，他很少說不。現在六十幾歲了，市場照去、機車照騎，東西也拿得動。朋友臨時約吃飯，他通常也是第一個說好。</p>
 <p>所以他一直覺得自己身體「還很可以」。</p>
 <p>直到去年那趟旅行。</p>
@@ -678,92 +492,75 @@ h2{
 <p>老周站穩後馬上揮揮手說：「沒事沒事，坐太久啦。」</p>
 <p>但接下來那一天，他開始偷偷注意自己的腳。</p>
 
-
 <figure class="article-image">
-
-  <img
-    src="assets/bus-knee-medical.jpg"
-    alt="60幾歲亞洲男性從遊覽車階梯往下踩">
-
+  <img src="assets/bus-knee-medical.jpg"
+       alt="60幾歲亞洲男性從遊覽車階梯往下踩，膝蓋醫學透視示意">
 </figure>
 
 <p>發現走平緩的路沒什麼；碰到高一點的階梯，腳會多停一下；遇到比較大的高低差，手也會下意識往旁邊找東西扶。</p>
 <p>回家後再想想，他才發現這種「卡一下」的狀況其實早就不是第一次。</p>
 <p>以前騎機車，一抬腿就跨過去了。最近偶爾會變成先把車扶穩，右腳抬到一半，要再多使一點力才跨得過去。</p>
 <p>坐久了起身也是，總想先站一下、動兩下再走。</p>
-<p>最奇怪的是，他並不覺得自己沒力。偏偏一碰到要抬高、跨大步、彎下去再起來的動作，就是沒有以前那麼乾脆。</p>
-<p>那次差點跌倒之後，老周才第一次真的把這件事放在心上。</p>
-
-
+<p>最奇怪的是，他並不覺得自己沒力。偏偏一碰到要抬高、跨大步、彎下去再起來的動作，就是沒有以前那麼順。</p>
 
 <h2>以前朋友聊保養他都沒興趣，這次換他自己開口問</h2>
-<p>幾天後，老周照樣跟幾個朋友喝茶。聊著聊著，又有人拿那天差點跌倒的事虧他。</p>
+
+<p>幾天後，老周照樣跟幾個朋友喝茶，聊著聊著，又有人拿那天差點跌倒的事虧他。</p>
 <p>「你真的要顧一下啦，那天要不是後面有人，你就下去了。」</p>
 <p>以前聽到這種話，老周大概又是一句「沒那麼嚴重啦」帶過。</p>
-<p>那天他卻難得自己問：「啊你們平常到底都怎麼顧？」</p>
-<p>坐旁邊的阿明一聽就笑了：「你以前不是最愛笑我們吃一堆？」</p>
-<p>「現在問一下不行喔。」</p>
-<p>阿明這才跟他說，自己前陣子也開始認真顧。</p>
-<p>「我跟你講，我以前也是覺得能走就好，哪有差那麼多。結果有一陣子出去玩，走沒多久就在找椅子，看到樓梯還會先問有沒有別條路。」</p>
-<p>阿明喝了一口茶，又接著說：「後來我也是想說試試看啊。結果吃一陣子之後，有一次他們揪去走步道，我走到後面才突然想到『欸，我今天怎麼都還沒找地方坐？』」</p>
-<p>旁邊朋友馬上虧：「真的啦，以前第一個喊要休息就是他。」</p>
-<p>「啊就真的有差咩。」阿明笑著說：「所以你那天差點摔，我才叫你不要再鐵齒。」</p>
+<p>那天他卻難得自己問：「啊你們平常是都怎麼顧？」</p>
+<p>坐旁邊的阿明一聽就笑了。</p>
+<p>「你以前不是最愛笑我們吃一堆有的沒的？」</p>
+<p>「問一下不行喔。」</p>
+
+<!-- 新增圖片：朋友喝茶 -->
+<figure class="article-image">
+  <img src="assets/friends-tea-chat.jpg"
+       alt="幾位60幾歲亞洲男性坐在一起喝老人茶聊天">
+</figure>
+
+<p>阿明這才跟他說，自己也是前陣子開始認真顧。</p>
+<p>「我跟你講，我以前也是覺得自己還能走，結果有一陣子出去玩，走沒多久就在找椅子，看到樓梯還會先問有沒有別條路。」</p>
+<p>阿明喝了一口茶，又接著說：「後來我也是想說試試看啊。結果試一陣子之後，有一次他們揪去走步道，我走到後面才突然想到『欸，我今天怎麼都還沒找地方坐？』」</p>
+<p>旁邊朋友馬上虧：「真的啦，以前第一個喊休息就是他。」</p>
+<p>「啊就真的有差咩。」阿明笑著說，「所以你那天差點摔，我才叫你不要再鐵齒。」</p>
 <p>這句老周倒是聽進去了。</p>
 <p>「所以你到底是吃什麼？」</p>
 <p>阿明伸出兩根手指。</p>
-<p>「一個甲魚膠，一個彈性蛋白。我現在這兩個是一起顧。」</p>
+<p>「一個甲魚膠，一個彈性蛋白。我現在都這兩個一起補。」</p>
 <p>講完還特別補了一句：「你不要聽到甲魚就嫌老派喔，我一開始也跟你一樣。後來自己去看才知道，跟我們以前想的根本不一樣。」</p>
-<p>老周這下更好奇了：「就鱉嘛！以前我阿爸阿母燉補會用。啊甲魚膠是什麼？彈性蛋白又是什麼？」</p>
+<p>老周這下更好奇了：「就鱉嘛！以前我家燉補會用。啊甲魚膠是什麼？彈性蛋白又是什麼？」</p>
 <p>阿明笑著回他：「你回去自己查啦，我跟你講一堆你也記不住。」</p>
 <p>「啊你不是很會講？」</p>
-<p>「我講我感覺到的就好啦，那些你自己看比較準。」</p>
+<p>「我講我感覺到的就好啦，那些你自己看比較詳細。」</p>
 <p>老周嘴上罵他一句「講一半的」，心裡倒真的把這兩個名字記下來了。</p>
 
-
-<!-- =========================
-     CTA 1：表單
-========================= -->
-
+<!-- CTA 1：填寫表單 -->
 <div class="article-cta">
-
-  <div class="cta-text">
-    想進一步了解，可以從這裡看看
-  </div>
-
+  <div class="cta-text">想進一步了解，可以從這裡看看</div>
   <a href="REPLACE_FORM_URL">
-
-    <img
-      src="assets/cta-form.gif"
-      alt="填寫表單">
-
+    <img src="assets/cta-form.gif" alt="填寫表單">
   </a>
-
 </div>
 
+<h2>「真的有差那麼多？」老周嘴上不信，回家卻偷偷查</h2>
 
-<h2>朋友那天講的兩個東西，他回家後還真的查了</h2>
 <p>晚上回到家，老周腦子裡還惦記著阿明講的那兩個東西。</p>
 <p>吃完飯坐在客廳，他拿起手機查了一下，結果越看越看不懂，最後乾脆把女兒叫過來。</p>
 <p>「欸，妳幫我看一下，這個甲魚膠到底是什麼？還有這個……彈性蛋白。」</p>
 <p>女兒接過手機還笑他：「你什麼時候開始研究這個了？」</p>
 <p>「阿明一直跟我講啊，說他吃了有差，我就想說到底是在吃什麼。」</p>
 <p>兩個人就這樣一邊看、一邊聊。</p>
-<p>老周才慢慢搞懂，甲魚膠裡有豐富的膠原相關營養；而彈性蛋白，講的是組織本身延展、回彈這一塊。</p>
-<p>老周看著手機點點頭。</p>
-<p>「這樣我就比較懂了。」</p>
+<p>老周才慢慢搞懂，甲魚膠裡有豐富的膠原蛋白；而彈性蛋白，講的是組織本身延展、回彈這一塊。</p>
+<p>女兒看著資料說：「這兩個本來就是不同的蛋白質，一個跟膠原營養有關，一個跟組織的彈性有關，所以阿明叔叔才會一起補吧！」</p>
+<p>老周點點頭：「這樣我就比較懂了。」</p>
 <p>結果繼續往下看，他突然看到一個完全沒想到的東西。</p>
-<p>「欸？等一下，怎麼還有鰹魚？」</p>
+<p>「欸？怎麼還有鰹魚？」</p>
 <p>原來有些彈性蛋白胜肽，會從鰹魚的動脈球取得。這個部位本來就會隨著心臟跳動不斷伸縮，因此含有豐富的彈性蛋白。</p>
 
-
-<!-- 圖片 2 -->
-
 <figure class="article-image">
-
-  <img
-    src="assets/bonito-bulbus-elastin.jpg"
-    alt="鰹魚動脈球與彈性蛋白示意圖">
-
+  <img src="assets/bonito-bulbus-elastin.jpg"
+       alt="鰹魚心臟動脈球與彈性蛋白示意圖">
 </figure>
 
 <p>老周一聽反而更好奇：「魚還有動脈球喔？我吃魚吃那麼多年都不知道。」</p>
@@ -772,72 +569,51 @@ h2{
 <p>以前朋友聊這些，他聽過就算了。這一次，他是真的想試了。</p>
 <p>「好啦，阿明都吃成這樣了，我也來認真顧一下。」</p>
 
+<h2>「我可不想下次真的摔下去！」這次他不敢再鐵齒</h2>
 
-<h2>那次差點真的摔下去，鐵齒了大半輩子的他終於怕了</h2>
 <p>從那之後，老周真的開始把這件事放在心上。</p>
 <p>沒突然去做什麼激烈運動，日子還是照樣過。能走就多走一點，坐久了就起來動一動，阿明跟他講的保養方式，他也開始認真照著做。</p>
+<p>剛開始那陣子，日子其實沒什麼不同。</p>
+<p>早上照樣騎車去市場，下午照樣跟朋友喝茶。偶爾跨機車還是得慢慢來，碰到高一點的階梯，也還是習慣先找扶手。</p>
+<p>有時候他也會想：「啊這樣到底有沒有差？」</p>
+<p>但轉念一想，以前就是什麼都沒在顧，現在才剛開始，哪有做沒幾天就知道的。</p>
+<p>就這樣，日子一天一天過，走路、活動、日常保養慢慢成了習慣。</p>
 <p>老婆看到還笑他：「以前叫你顧都不要，現在知道怕了喔？」</p>
 <p>老周嘴硬：「哪有怕，我是不想要下次真的摔下去，你還要照顧我。」</p>
-<p>其實他在意的，也不只是摔不摔這件事。</p>
-<p>六十幾歲了，他沒想過還要跑多快、爬多高，更沒想跟年輕人比。</p>
-<p>他只是希望生活還能跟以前一樣。</p>
-<p>騎機車要出門，抬腳就能跨上去，不用站在旁邊喬半天。遊覽車門一開，跟著大家下車就好，不用先盯著下面那一階，想著等等要怎麼踩。</p>
-
+<p>其實他在意的，也不只是摔不摔這件事。六十幾歲了，他沒想過還要跑多快、爬多高，更沒想跟年輕人比。他只是希望生活還能跟以前一樣，騎機車出門不用想那麼多，遊覽車一停，跟著大家下車就好。</p>
 
 <figure class="article-image">
-
-  <img
-    src="assets/scooter-stepover.jpg"
-    alt="60幾歲亞洲男性準備騎機車出門">
-
+  <img src="assets/scooter-stepover.jpg"
+       alt="60幾歲亞洲男性準備抬右腳跨上機車">
 </figure>
 
-
 <p>朋友在電話裡問一句「下禮拜要不要出去走走？」</p>
-<p>他不想要腦中第一個冒出來的是「那邊樓梯多不多、走不走得完。」</p>
+<p>他希望自己能直接回一句「好啊」，而不是先想那邊樓梯多不多、自己走不走得完。</p>
 <p>能想去就去，不用每次出門前，都先替自己的腳想那麼多。</p>
 
+<h2>結婚幾十年，老婆一眼就看出老周哪裡不一樣</h2>
 
-
-<h2>「欸，你最近上車怎麼變快了？」老婆比他自己還早發現</h2>
 <p>有天夫妻倆準備騎機車出門。</p>
 <p>老婆站在旁邊等他，看他把腳一跨，突然冒出一句：「欸，你最近上車怎麼變快了？」</p>
-<p>老周愣了一下。「有嗎？」</p>
+<p>老周愣了一下，還回頭看老婆：「有嗎？」</p>
 <p>「有啊，你以前不是都要先扶好、站一下，再慢慢跨？」</p>
 <p>被老婆這樣一講，他才低頭看了一下自己的右腳。</p>
 <p>之前每次騎車，他都要先把車扶正、站穩，右腳再慢慢抬過去。做久了，連他自己都沒覺得哪裡奇怪。</p>
 <p>「好像真的有差喔。」</p>
-<p>後來老周才發現，不只是跨機車。之前坐久了要起身，總會先站在原地動個兩下；看到高一點的階梯，手還沒跨出去，就先往旁邊找扶的。</p>
+<p>後來老周才發現，不只是跨機車，之前坐久了要起身，總會先站在原地動個兩下；看到高一點的階梯，腳還沒跨出去，就先往旁邊找扶的。</p>
 <p>直到有一天，他走完一段樓梯才突然想到：「欸？我剛剛好像都沒扶。」</p>
 <p>那一刻老周自己都笑了。</p>
-<p>原來他最有感的，不是突然變得多厲害。</p>
 
-
-<!-- =========================
-     CTA 2：LINE
-========================= -->
-
+<!-- CTA 2：加入 LINE -->
 <div class="article-cta">
-
-  <div class="cta-text">
-    想了解更多日常保養資訊
-  </div>
-
-  <a
-    href="REPLACE_LINE_URL"
-    target="_blank"
-    rel="noopener">
-
-    <img
-      src="assets/cta-line.gif"
-      alt="加入 LINE 官方帳號">
-
+  <div class="cta-text">想了解更多日常保養資訊</div>
+  <a href="REPLACE_LINE_URL" target="_blank" rel="noopener">
+    <img src="assets/cta-line.gif" alt="加入 LINE 官方帳號">
   </a>
-
 </div>
 
+<h2>一年後再出去玩，老周這次不一樣了</h2>
 
-<h2>一年後再跟這群朋友出遊，大家都在看他這次怎麼下車</h2>
 <p>今年，大家又約了一趟。車子一路開到九份。</p>
 <p>到站後，老周才剛站起來，旁邊馬上有人故意提醒：「欸，這次慢慢來喔。」</p>
 <p>老周瞪了他一眼說：「你顧好你自己啦。」</p>
@@ -846,21 +622,26 @@ h2{
 <p>走沒多久，已經有人開始問：「等一下要不要先坐一下？」</p>
 <p>原本大家還有說有笑地走在一起，走了一段之後，老周才發現，身邊怎麼突然安靜了不少。</p>
 <p>他回頭一看，其他人竟然都落在後面。</p>
-<p>直到後面有人喊：「老周！」</p>
-<p>他停下來回頭。</p>
-<p>「蛤？」</p>
+<p>這時後面有人喊了一聲：「老周！」</p>
+<p>「蛤？怎樣啦？」</p>
 <p>「你走慢一點啦！」</p>
-<p>老周站在前面，當場笑出來。</p>
+<p>老周看著後面那群老朋友，當場笑了出來。</p>
 <p>「現在是怎樣？去年叫我小心，今年又叫我慢一點。」</p>
 <p>朋友回他：「你現在很囂張喔！」</p>
 <p>大家一路笑。</p>
-<p>但老周心裡其實很有感。</p>
-<p>去年差點跌倒時，是這群人在旁邊。</p>
-<p>今年叫他走慢一點的，還是這群人。</p>
 
+<!-- 新增圖片：九份出遊 -->
+<figure class="article-image">
+  <img src="assets/jiufen-friends-stairs.jpg"
+       alt="九份石階上，老周走在前面回頭看後面的老朋友">
+</figure>
 
-<h2>去年差點摔倒、今年走在最前面，老周自己最有感的卻不是這件事</h2>
-<p>被問到覺得差最多的是什麼，大家本來以為，他會講上下樓梯、跨機車，或是比較耐走。結果老周想了一下，只回了一句：「現在有人約，我就去啊。」</p>
+<p>但老周心裡其實很踏實。</p>
+<p>去年差點跌倒時，是這群人在旁邊。今年叫他走慢一點的，還是這群人。</p>
+
+<h2>以前朋友約總說下次，現在他連想都不用想</h2>
+
+<p>後來被問到覺得差最多的是什麼，大家本來以為，他會講上下樓梯、跨機車，或是比較耐走。結果老周想了一下，只回了一句：「現在有人約，我就去啊。」</p>
 <p>以前朋友在群組裡揪出遊，他嘴上沒說，心裡卻會先想一輪。</p>
 <p>那邊是不是要走很多路？</p>
 <p>樓梯多不多？</p>
@@ -869,21 +650,15 @@ h2{
 <p>但現在不太一樣了。朋友說要去走走，他第一個想到的是：「幾點出發？」</p>
 <p>對老周來說，這反而比那天在九份走在大家前面，更讓他高興。</p>
 <p>六十幾歲了，他沒想過還要跟年輕人比體力，也不在乎自己能走多快，他只是很慶幸，想去的地方，不用還沒出門，就先放棄。</p>
-<p>前幾天，群組裡又有人丟了一句：「下個月有人要出去走走嗎？」</p>
-<p>阿明才剛傳完，老周沒過多久就回了。</p>
+<p>前幾天，阿明又在群組裡丟了一句：「下個月有人要出去走走嗎？」</p>
+<p>才剛傳完，老周沒過多久就回了。</p>
 <p>「我啊，算我一個。」</p>
 
-
 </div>
 </div>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- Footer：保留原設定 -->
 <footer class="footer">
-
   <div class="warning">
     本頁內容僅供健康資訊參考，不作為醫療診斷、治療或處方依據；如有身體不適，請洽專業醫療人員。
     <br><br>
@@ -897,26 +672,14 @@ h2{
     &nbsp;｜&nbsp;
     <a href="research.html">Scientific Research</a>
   </div>
-
 </footer>
 
-
-<!-- =========================
-     底部懸浮電話 CTA
-========================= -->
-
+<!-- 底部懸浮電話 CTA：保留原設定 -->
 <div class="sticky-cta">
-
   <a href="tel:REPLACE_PHONE">
-
-    <div class="sticky-fallback">
-      立即了解更多資訊
-    </div>
-
+    <div class="sticky-fallback">立即了解更多資訊</div>
   </a>
-
 </div>
-
 
 </body>
 </html>

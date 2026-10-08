@@ -300,15 +300,17 @@ h2:before{
 }
 
 /* 底部懸浮 CTA */
+
 .sticky-cta{
   position:fixed;
   z-index:999;
   left:50%;
-  bottom: max(12px, env(safe-area-inset-bottom));
+  bottom:max(12px, env(safe-area-inset-bottom));
   transform:translateX(-50%);
-  width:min(600px,calc(100% - 24px));
+  width:min(690px, calc(100% - 24px));
   filter:drop-shadow(0 4px 12px rgba(0,0,0,.22));
 }
+
 .sticky-cta a{
   display:block;
   text-decoration:none;
@@ -697,10 +699,33 @@ h2:before{
          loading="lazy" />
 
   </a>
-</div>
 
   </div>
 
+
+<script>
+(function(){
+  const cta = document.querySelector('.sticky-cta');
+  if (!cta) return;
+
+  function updateCTASpace(){
+    const height = cta.getBoundingClientRect().height;
+    const bottom = parseFloat(getComputedStyle(cta).bottom) || 0;
+
+    document.body.style.paddingBottom =
+      Math.ceil(height + bottom + 24) + 'px';
+  }
+
+  updateCTASpace();
+
+  window.addEventListener('load', updateCTASpace);
+  window.addEventListener('resize', updateCTASpace);
+
+  if ('ResizeObserver' in window){
+    new ResizeObserver(updateCTASpace).observe(cta);
+  }
+})();
+</script>
 
 </body>
 </html>

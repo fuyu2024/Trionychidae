@@ -535,13 +535,17 @@ h2:before{
 <p>「我講我感覺到的就好啦，那些你自己看比較詳細。」</p>
 <p>老周嘴上罵他一句「講一半的」，心裡倒真的把這兩個名字記下來了。</p>
 
-<!-- CTA 1：填寫表單 -->
-<div class="article-cta">
-  <div class="cta-text">想進一步了解，可以從這裡看看</div>
-  <a href="REPLACE_FORM_URL">
-    <img src="assets/cta-form.gif" alt="填寫表單">
-  </a>
-</div>
+ <!-- CTA：填表登記 -->
+      <div class="cta-wrap">
+        <a href="https://jah.to/JIC009"
+          target="_blank"
+          rel="noopener"
+          data-cta="outbound"
+          data-label="form_register"
+          onclick="window.dataLayer=window.dataLayer||[];dataLayer.push({'event':'cta_click','cta':'form_register','target':'jah_to_form'});">
+          <img class="cta-img" src="./images/97CTA.gif" alt="填表登記索取甲魚膠優惠" loading="lazy" />
+        </a>
+      </div>
 
 <h2>「真的有差那麼多？」老周嘴上不信，回家卻偷偷查</h2>
 
@@ -604,11 +608,17 @@ h2:before{
 <p>直到有一天，他走完一段樓梯才突然想到：「欸？我剛剛好像都沒扶。」</p>
 <p>那一刻老周自己都笑了。</p>
 
-<!-- CTA 2：加入 LINE -->
-<div class="article-cta">
-  <div class="cta-text">想了解更多日常保養資訊</div>
-  <a href="REPLACE_LINE_URL" target="_blank" rel="noopener">
-    <img src="assets/cta-line.gif" alt="加入 LINE 官方帳號">
+<!-- CTA：加LINE好友 -->
+<div class="cta-wrap">
+  <a href="https://jah.to/JIC010"
+     target="_blank"
+     rel="noopener"
+     data-cta="line"
+     data-label="add_line_1"
+     onclick="window.dataLayer=window.dataLayer||[];dataLayer.push({'event':'cta_click','cta':'add_line','target':'line_add'});">
+    
+    <img class="cta-img" src="./images/98CTA.gif" alt="加入LINE好友專人一對一諮詢" loading="lazy" />
+  
   </a>
 </div>
 
@@ -674,12 +684,22 @@ h2:before{
   </div>
 </footer>
 
-<!-- 底部懸浮電話 CTA：保留原設定 -->
-<div class="sticky-cta">
-  <a href="tel:REPLACE_PHONE">
-    <div class="sticky-fallback">立即了解更多資訊</div>
-  </a>
 </div>
+
+ <!-- 置底 CTA：電話諮詢 -->
+  <div class="sticky" aria-label="置底固定 CTA">
+    <div class="sticky-inner">
+<a href="tel:0800282777"
+   aria-label="電話諮詢 0800-282-777"
+   data-cta="call"
+   data-label="call_sticky"
+   style="display:block; width:100%;"
+   onclick="window.dataLayer=window.dataLayer||[];dataLayer.push({'event':'telclick','tel':'0800282777','pos':'sticky'});">
+  <img class="sticky-img" src="./images/99CTAG.gif" alt="一對一電話諮詢" loading="lazy" />
+</a>
+    </div>
+  </div>
+
 
 </body>
 </html>
